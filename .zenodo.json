@@ -1,0 +1,19 @@
+{
+  "title": "Course material First steps with R in Life Sciences",
+  "keywords": [
+    "programming",
+    "R",
+    "course",
+    "training"
+  ],
+  "creators": [
+    {
+      "name": "Robin Engler",
+      "affiliation": "SIB Swiss Institute of Bioinformatics"
+    },
+    {
+      "name": "Wandrille Duchemin",
+      "affiliation": "SIB Swiss Institute of Bioinformatics"
+    }   
+  ]
+}
