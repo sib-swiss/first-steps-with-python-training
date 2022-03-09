@@ -1,9 +1,8 @@
 # In this solution, we provide 2 different ways to write a function
 # that creates the reverse complement of a sequence.
 
-
 def reverse_complement(seq):
-    """returns the reverse complement of a sequence given as argument.
+    """Returns the reverse complement of a sequence given as argument.
 
     This is the implementation using a dictionary to lookup nucleotide
     complements.
@@ -25,7 +24,7 @@ def reverse_complement(seq):
 
 
 def reverse_complement_2(seq):
-    """returns the reverse complement of a sequence given as argument.
+    """Returns the reverse complement of a sequence given as argument.
 
     This is the implementation using if/else lookup nucleotide complements.
     """
@@ -43,7 +42,7 @@ def reverse_complement_2(seq):
         elif nucleotide == "C":
             complement += "G"
         else:
-            # In case the nucleotide it is not A T G or C -> error!
+            # In case the nucleotide is not A, T, G, or C -> error!
             print("Unkown nucleotide :", nucleotide)
             print("Abort!")
             return None
@@ -71,3 +70,16 @@ print("Is 'reverse_complement_2' result correct?", revcomp_seq_2 == online_resul
 def reverse_complement_3(seq):
     nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
     return "".join([nucleotide_complements[n] for n in seq])[::-1]
+
+# Bonus: benchmarking of the 3 functions.
+#        Uncomment the code below to run (it takes a little while to run).
+# Warning: %timeit is an iPython "magic" functions that benchmarks a function.
+#          This will only run a Jupyter notebook, not in a regular python shell.
+
+# test_sequence = "ATAGAGCGATCGATCCCTAG" * 10000
+# print("Benchmarking reverse_complement ...")
+# %timeit reverse_complement(test_sequence)
+# print("Benchmarking reverse_complement_2 ...")
+# %timeit reverse_complement_2(test_sequence)
+# print("Benchmarking reverse_complement_3 ...")
+# %timeit reverse_complement_3(test_sequence)

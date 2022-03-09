@@ -1,5 +1,7 @@
 def divide_if_even(n):
-    """Takes a number and divide it by 2 if it is even"""
+    """Takes a number and divides it by 2 if it is even.
+    If the number is odd, it is returned unchanged.
+    """
 
     # To test if a number is even, we check whether the remainder of its
     # integer division by 2 is equal 0.

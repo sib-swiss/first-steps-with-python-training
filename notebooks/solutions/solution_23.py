@@ -4,13 +4,14 @@
 #
 # The first implementation takes a bit longer to design and write, however it
 # may be easier to understand for someone who does not know the methods of
-# `str` in Python.
+# "str" in Python.
 # Also, the first implementation may be faster than the second implementation
 # because it iterates over the nucleotides of `seq` only once, whereas the
 # second function does it twice (in each call of the `count` method). This is
 # however mitigated by the fact that native python methods and function are
 # often quite efficient, and it is not easy to outperform them.
-
+# Note: upon benchmarking both solutions, it turns-out that the second one,
+#       which uses the build-in ".count()" method is faster.
 
 # First implementation, using a for loop.
 def get_GC_percent(seq):
@@ -50,14 +51,12 @@ for seq, expected_value in test_sequences.items():
         print("ERROR: unexpected value for", seq, ": ", actual_value, "[expected:", expected_value,"]")
 
 
-# Let's test our 2 implementations:
-my_seq = "ATAGAGCGATCGATCCCTAGCTA"
-gc1 = get_GC_percent(my_seq)
-gc2 = get_GC_percent_2(my_seq)
 
-if gc1 != gc2:
-    print("ERROR! The 2 functions returned different results:", gc1, gc2, sep="\n")
-else:
-    print("The 2 functions returned the same result.\nGC% of the sequence:", gc1)
+# Bonus: benchmarking of the 2 implementations.
+#        Uncomment the code below to run (it takes a little while to run).
+# Warning: %timeit is an iPython "magic" functions that benchmarks a function.
+#          This will only run a Jupyter notebook, not in a regular python shell.
 
-
+# test_seq = "ATAGAGCGATCGATCCCTAGCTA" * 1000
+# %timeit get_GC_percent(test_seq)
+# %timeit get_GC_percent_2(test_seq)

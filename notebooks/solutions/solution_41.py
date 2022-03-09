@@ -1,12 +1,12 @@
-
-import os
+import os    # Import the os module into the global namespace.
 
 
 def count_files(dir_name):
-    """counts files present in the input directory. Only files are counter,
-    directories are ignored.
+    """Counts files present in the input directory.
+    Only files are counted, directories are ignored.
     """
-    # Intialize file counter.
+    
+    # Initialize file counter.
     file_count = 0
 
     # Loop through all files and directories present in the input directory.

@@ -42,6 +42,6 @@ def factorial_using_loop(n):
     return fact
 
 
-# Testing our function on number 4
+# Testing our function with the number 4.
 print("4! =", factorial_using_loop(4))
 print("4! =", factorial_using_loop(4.0))

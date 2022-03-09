@@ -4,7 +4,7 @@ import time
 # To see what the "sleep()" function does, we print its help:
 # Reading the help we learn that "time.sleep()" will pause
 # code execution for 3 seconds.
-print(help(time.sleep))
+help(time.sleep)
 
 
 # Example usage:
