@@ -1,3 +1,8 @@
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6541379.svg)](https://doi.org/10.5281/zenodo.6541379)
+
+
 # First steps with Python in Life Sciences
 
 This course material is part of the "First Steps with Python in Life Science" three-day course of [SIB-training](https://www.sib.swiss/training/who-can-benefit) and is addressed to beginners wanting to become familiar with the Python syntax, environment, and the most common commands.
@@ -43,3 +48,9 @@ Exercise notebooks:
 
 The data used in the practicals can be found in the data [`notebooks/data`](notebooks/data/) folder, and
 solutions codes can be found in the [`notebooks/solutions/`](notebooks/solutions/) folder (NB: micro-exercises do not have a correction).
+
+
+## citation
+
+If you use/reuse this material, please cite as:
+Robin Engler, Wandrille Duchemin, & Orlin Topalov. (2022, May 12). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.6541379
