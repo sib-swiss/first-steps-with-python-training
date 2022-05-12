@@ -53,4 +53,5 @@ solutions codes can be found in the [`notebooks/solutions/`](notebooks/solutions
 ## citation
 
 If you use/reuse this material, please cite as:
+
 Robin Engler, Wandrille Duchemin, & Orlin Topalov. (2022, May 12). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.6541379
