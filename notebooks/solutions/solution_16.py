@@ -33,8 +33,8 @@ humanities_doc = {
     "Other humanities": 1934,
 }
 
-# 1. Merge the 3 dictionnaries
-# ****************************
+# 1. Merge the 3 dictionaries
+# ***************************
 all_doc = {}
 all_doc.update(science_doc)
 all_doc.update(engineering_doc)
@@ -48,13 +48,13 @@ all_doc_2.update(engineering_doc)
 all_doc_2.update(humanities_doc)
 print("Are the two dict identical?", all_doc == all_doc_2)
 
-# python > 3.5 ** dictionary unpacking
+# python > 3.5 ** dictionary unpacking.
 all_doc_3 = {**science_doc, **engineering_doc, **humanities_doc}
 
 
 # 2. What is the length of the all_doc dictionnary
 # ************************************************
-print("Length of the dicitonnary:", len(all_doc))
+print("Length of the dictionary:", len(all_doc))
 
 
 # 3. Add "Health" doctorates

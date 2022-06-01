@@ -1,60 +1,67 @@
-# 1. Load the data in thefile "sample_data.tsv" as a numpy array
 
 import numpy as np
 import scipy.stats as stats
 
-#the loading itself is not hard
-data = np.loadtxt("data/sample_data.tsv", dtype=np.float,delimiter='\t', skiprows=1) #notice I skip the first row
+# 1. Load the data from the input "sample_data.tsv" file
+# ******************************************************
 
-#I load the header separately
-IN = open("data/sample_data.tsv",'r')
-l = IN.readline() #read the first line
-header = l.strip().split('\t') #split it to get the header
-IN.close()#no need to go further than that
+# Note that we skip the first row because it contains the column names, and 
+# we here load the data as a matrix, not as a DataFrame.
+input_file = "data/sample_data.tsv"
+data = np.loadtxt(input_file, dtype=float, delimiter='\t', skiprows=1)
 
-print( data.shape )
-print(header)
-#showing the first 5 lines 
-print(data[0:5,])
+# Load the header of the file separately.
+with open(input_file, mode="r") as f:
+    line = f.readline() # Read the first line of the file - contains header.
+    header = line.strip().split('\t') # Split it to get the column names.
+
+# Display the matrix dimension and column names.
+print("The dimension of the data matrix is:", data.shape)
+print("The column names of the matrix are :", header)
+
+# Showing the first 3 lines of the matrix. 
+print(data[0:3,])
+
 
 # 2. Log-transform the data
-
+# *************************
+# Log-transform the data in base 2 log.
 log_data = np.log2(data)
+print(log_data[0:3,])
 
-print(log_data[0:5,])
 
-
-# 3. Find the row-wise means for replicates of Sample1 and Sample2
-
-print(header)
-#first, I will create lists containing the indexes of columns for both samples
-sample1_columns = []
-sample2_columns = []
+# 3. Compute row-wise means for replicates of Sample1 and Sample2
+# ***************************************************************
+# The values for sample 1 and sample 2 are distributed over several columns,
+# so we first need to identify the indices of columns for sample 1, and 2.
+# We use the column names to identify the sample to which they belong.
+s1_columns = []
+s2_columns = []
 for i , column_name in enumerate(header):
     if column_name.startswith('Sample1'):
-        sample1_columns.append(i)
+        s1_columns.append(i)
     elif column_name.startswith('Sample2'):
-        sample2_columns.append(i)
+        s2_columns.append(i)
 
-print('sample 1')
-print(log_data[0:2,sample1_columns])
-print('sample 2')
-print(log_data[0:2,sample2_columns])
-
-
-#now, it is fairly easy to get the row-wise means
-meanSample1 = np.mean(log_data[:,sample1_columns], axis=1)
-meanSample2 = np.mean(log_data[:,sample2_columns], axis=1)
+# Now that we have the indices of columns, it is fairly easy to compute
+# row-wise means for the columns of each sample.
+mean_s1 = np.mean(log_data[:, s1_columns], axis=1)
+mean_s2 = np.mean(log_data[:, s2_columns], axis=1)
+print("Mean values per row for sample 1 replicates:\n", mean_s1)
+print("Mean values per row for sample 2 replicates:\n", mean_s2)
 
 
-# 4. Find the row-wise standard deviations the same way as means
+# 4. Compute row-wise standard deviations
+# ***************************************
+std_s1 = np.std(log_data[:, s1_columns], axis=1)
+std_s2 = np.std(log_data[:, s2_columns], axis=1)
+print("Std values per row for sample 1 replicates:\n", mean_s1)
+print("Std values per row for sample 2 replicates:\n", mean_s2
 
-stdSample1 = np.std(log_data[:,sample1_columns], axis=1)
-stdSample2 = np.std(log_data[:,sample2_columns], axis=1)
 
 # 5. Use a function *scipy.stats.ttest_ind* to calculate p-value for every row
 
-TTest_pValues = stats.ttest_ind(log_data[:,sample1_columns], log_data[:,sample2_columns], axis=1, equal_var=False).pvalue
+TTest_pValues = stats.ttest_ind(log_data[:,s1_columns], log_data[:,s2_columns], axis=1, equal_var=False).pvalue
 
 # 6. Select p-values which are smaller than $10^{-2}$
 

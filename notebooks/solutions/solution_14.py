@@ -32,7 +32,7 @@ while pos != -1:
 print(positions)
 
 
-# Note: starting with python 3.8, the "wallrus" opperatror ":=" can be used
+# Note: starting with python 3.8, the "wallrus" opperator ":=" can be used
 # to write the code is a more condensed fashion.
 #
 # The := operator allows to assign a value to a variable (here "pos"), and
