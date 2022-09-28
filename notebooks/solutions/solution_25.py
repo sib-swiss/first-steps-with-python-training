@@ -30,7 +30,7 @@ def factorial_using_loop(n):
     # does not run if n <= 1, and the function thus returns 1.
     if n <= 1:
         return 1  # Note: anytime the "return" keyword is called,
-                  # we exit the function immediatly.
+                  # we exit the function immediately.
 
     # Loop through numbers from 1 to n.
     # Remember that in "range()"" the end point (second argument) is excluded.

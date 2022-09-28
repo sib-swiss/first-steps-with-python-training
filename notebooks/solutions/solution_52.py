@@ -15,7 +15,7 @@ df_demo.head()
 df_hosp.head()
 
 
-# 3. Subset the number of hospitalised person data frame
+# 3. Subset the number of hospitalized person data frame
 # ******************************************************
 # Keep only columns "AG" -> "CH" (i.e. the first 27 columns)
 df_hosp = df_hosp.loc[:, "AG":"CH"]
@@ -41,14 +41,14 @@ df_hosp /= (pop_by_canton / 10000)
 df_hosp.head()
 
 
-# 6. For each canton, date at which the hosptitalization rate was maximal
+# 6. For each canton, date at which the hospitalization rate was maximal
 # ***********************************************************************
 # one liner answer:
 df_hosp.idxmax(axis=0)
 
 
-# Additional taks 
-# ***************
+# Additional tasks 
+# ****************
 # Create new data frame with max hospitalized people and date
 df_max_hosp = pd.DataFrame(
     {
