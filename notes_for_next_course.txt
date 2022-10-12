@@ -1,0 +1,8 @@
+Notes for the next course - 10/2022
+
+ - ch1 : illustration of what is memory (can be useful for the most computer illiterate participants)?
+ - ch2 : if and loops, then exo, and then function?
+ - reduce chapter 3 to just the for loop and .readline() 
+    + add a doodle to explain file pointers?
+
+
