@@ -9,8 +9,8 @@ print(division)
 
 # Note that if we use "int(b)", then the code will fail if the  input "b"
 # is set to a fractional value. Using float(b) makes the code more
-# resistant to diffent user inputs as it will convert both inputs with and
-# without fractional values.
+# resistant to different user inputs as it will convert both inputs with
+# and without fractional values.
 a = 12
 b = "36.7"
 division = float(b) / a

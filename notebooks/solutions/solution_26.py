@@ -44,7 +44,7 @@ def next_collatz_2(n):
 def collatz_sequence_length(n, max_iter=500):
     """Returns the length of the Collatz sequence of n.
 
-    If the sequence length exeeds the maximum number of allowed iterations,
+    If the sequence length exceeds the maximum number of allowed iterations,
     "max_iter", the function returns None.
     """
     seq_length = 1  # Counter for sequence length.
@@ -52,7 +52,7 @@ def collatz_sequence_length(n, max_iter=500):
         n = next_collatz(n)  # Compute the next number in the sequence.
         seq_length += 1
 
-        # If the sequence length exeeds the maximum number of allowed
+        # If the sequence length exceeds the maximum number of allowed
         # iterations, we return None.
         if seq_length > max_iter:
             print("Error: sequence did not converge after",
@@ -67,13 +67,13 @@ print("Collatz sequence length for value", n, "is:",
       collatz_sequence_length(n, 20), "\n")
 
 
-# And here one more solution where we additionaly implement a check to see
+# And here one more solution where we additionally implement a check to see
 # whether a number in the sequence was already encountered, which would
 # indicate that we are stuck in an infinite sequence...
 def collatz_sequence_length(n, max_iter=500):
     """Returns the length of the collatz sequence of n.
 
-    If the sequence length exeeds the maximum number of allowed iterations,
+    If the sequence length exceeds the maximum number of allowed iterations,
     "max_iter", the function returns None.
     """
 

@@ -1,5 +1,5 @@
 
-# 1. Create a pandas dataframe
+# 1. Create a pandas DataFrame
 # ****************************
 import pandas as pd
 
@@ -13,8 +13,10 @@ df = pd.DataFrame(data)
 df.index = df["index"]
 
 # Note: alternatively, we can also use the "set_index()" method.
-#  -> use "drop = False" to keep the column used as index. By default drop = True.
-#  -> use "inplace = True" to modify the orignal DataFrame, otherwise a new DataFrame is returned.
+#  -> use "drop = False" to keep the column used as index.
+#     By default drop = True.
+#  -> use "inplace = True" to modify the original DataFrame, otherwise
+#     a new DataFrame is returned.
 df.set_index("index", drop=False, inplace=True)
 
 

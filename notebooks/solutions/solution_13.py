@@ -18,6 +18,6 @@ print(modified_quote)
 # whitespaces (removing all spaces), and then concatenate the words back
 # using "@", essentially replacing white spaces with "@".
 # Note that this will also e.g. replace "\t" and "\n", since the are
-# white spaces, unless we explicitely pass " " to split().
+# white spaces, unless we explicitly pass " " to split().
 print("@".join(my_quote.split()))
 print("@".join(my_quote.split(" ")))  # to avoid replacing "\t" or "\n"

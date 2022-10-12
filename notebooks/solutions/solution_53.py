@@ -1,7 +1,7 @@
 
 import pandas as pd
 
-# 1. Center each column: substract their mean from their values
+# 1. Center each column: subtract their mean from their values
 # *************************************************************
 df = pd.read_csv("data/mouse_heart_gene_expresssion.tsv", sep="\t")
 column_means = df.mean()
@@ -24,7 +24,7 @@ mask = (
 df[mask].head()
 
 
-# If we hadn't done the substraction, here's how we could do it:
+# If we hadn't done the subtraction, here's how we could do it:
 df = pd.read_csv("data/mouse_heart_gene_expresssion.tsv", sep="\t")
 column_means = df.mean()
 mask = (

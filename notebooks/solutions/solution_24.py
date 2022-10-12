@@ -5,13 +5,13 @@ quote = (
     "Brave Sir Robin turned about and gallantly he chickened out..."
 )
 
-# Instantiate an empty dictionnary.
+# Instantiate an empty dictionary.
 letter_counts = {}
 
 # Loop through the quote, one character at a time.
 for char in quote:
 
-    # Test whether the current character is already present in the dictionnary.
+    # Test whether the current character is already present in the dictionary.
     if not char in letter_counts:
         # If not, initialize its count value to 0.
         letter_counts[char] = 0
@@ -20,7 +20,7 @@ for char in quote:
     letter_counts[char] += 1
 
 
-# Let's now print the results by looping over each key in the dictionnary.
+# Let's now print the results by looping over each key in the dictionary.
 # We additionally sort the output in alphabetical order.
 for letter in sorted(letter_counts):
     print(letter, letter_counts[letter], sep=" -> ")
@@ -42,7 +42,7 @@ for char in quote.lower():
     if not char.isalpha():
         continue
 
-    # Test whether the current letter is already present in the dictionnary.
+    # Test whether the current letter is already present in the dictionary.
     if not char in letter_counts:
         # If not, initialize its count value to 0.
         letter_counts[char] = 0

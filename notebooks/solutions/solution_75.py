@@ -1,9 +1,10 @@
 ### 7.5
 
-# **1.** In **"SARS-CoV-2_S.gb"** file, you will find the GenBank sequence records of the 'S'
-# gene for the first 50 accessions we used in previous exercises. 
-# Can you create a **fasta** file that contains the spike protein sequences for these?
-# Try to keep their `.id` and avoid translating stop codons!
+# **1.** In **"SARS-CoV-2_S.gb"** file, you will find the GenBank sequence
+# records of the 'S' gene for the first 50 accessions we used in previous
+# exercises. 
+# Can you create a **fasta** file that contains the spike protein sequences
+# for these? Try to keep their `.id` and avoid translating stop codons!
 
 with open("spike_proteins.fa", "w") as fasta:
     for rec in SeqIO.parse("data/SARS-CoV-2_S.gb", "genbank"):
@@ -12,8 +13,10 @@ with open("spike_proteins.fa", "w") as fasta:
         SeqIO.write(prot, fasta, "fasta")
 
 
-# **2**. Did you notice the *Warning* above, when we try to translate the first 50 accessions.
-# It seems the length of one or more of our 'S' CDSs is not multiple of three. Can you find which one?
+# **2**. Did you notice the *Warning* above, when we try to translate the
+# first 50 accessions.
+# It seems the length of one or more of our 'S' CDSs is not multiple of three.
+# Can you find which one?
 
 for rec in SeqIO.parse("data/SARS-CoV-2_S.gb", "genbank"):
     for feature in rec.features:

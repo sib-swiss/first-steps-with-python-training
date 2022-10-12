@@ -52,8 +52,8 @@ print("Are the two dict identical?", all_doc == all_doc_2)
 all_doc_3 = {**science_doc, **engineering_doc, **humanities_doc}
 
 
-# 2. What is the length of the all_doc dictionnary
-# ************************************************
+# 2. What is the length of the all_doc dictionary
+# ***********************************************
 print("Length of the dictionary:", len(all_doc))
 
 
