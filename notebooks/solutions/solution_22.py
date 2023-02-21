@@ -1,85 +1,48 @@
-# In this solution, we provide 2 different ways to write a function
-# that creates the reverse complement of a sequence.
+# Imagine a population starting with 1000 individuals.
+# Each generation the population is multiplied by 1.5. 
 
-def reverse_complement(seq):
-    """Returns the reverse complement of a sequence given as argument.
+## note for the rest of the correction :
+##  here I allow the population to be float numbers, 
+##   but alternatively one could constrain it to be integers only
 
-    This is the implementation using a dictionary to lookup nucleotide
-    complements.
-    """
-    nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
+#  1. Simulate a few generation. How large is the population after 3 generations?
+pop = 1000
+growth_factor = 1.5
+print("generation 0 - population:",pop)
+pop *= growth_factor # 1 generation : the population is multiplied by the growth factor
+print("generation 1 - population:",pop)
+pop *= growth_factor # 1 generation : the population is multiplied by the growth factor
+print("generation 2 - population:",pop)
+pop *= growth_factor # 1 generation : the population is multiplied by the growth factor
+print("generation 3 - population:",pop)
 
-    # Create an empty string variable that will be used to store the
-    # function's output.
-    reversed_complement = ""
+print('***')
+#  2. Use a while loop to simulate the population until it reaches 10 000 individuals or more. How many generation did it take?
 
-    # Loop through all nucleotides in the sequence in reverse sequence.
-    # In this way, we won't need to reverse the sequence later.
-    for nucleotide in seq[::-1]:
-        # Find the complement of the current nucleotide.
-        reversed_complement += nucleotide_complements[nucleotide]
+## initialization
+pop = 1000
+growth_factor = 1.5
+generation = 0
 
-    # Return the reverse complement.
-    return reversed_complement
+## while the population is under 10 000, we continue to grow it
+while pop < 10000 :
+    pop *= growth_factor
+    generation += 1
+    print("generation",generation,"- population:",pop)
+print("it took",generation,"generations to reach 10000 (actual population is",pop,')')
 
+print('***')
+#  3. How does the above change if the population starts at 100 individuals? 
 
-def reverse_complement_2(seq):
-    """Returns the reverse complement of a sequence given as argument.
+## we just have to change the initialization
+pop = 100
+growth_factor = 1.5
+generation = 0
 
-    This is the implementation using if/else lookup nucleotide complements.
-    """
-    # Create an empty string variable that will be used to store the
-    # function's output.
-    complement = ""
-    # Loop through all nucleotides in the sequence...
-    for nucleotide in seq:
-        if nucleotide == "A":
-            complement += "T"
-        elif nucleotide == "T":
-            complement += "A"
-        elif nucleotide == "G":
-            complement += "C"
-        elif nucleotide == "C":
-            complement += "G"
-        else:
-            # In case the nucleotide is not A, T, G, or C -> error!
-            print("Unkown nucleotide :", nucleotide)
-            print("Abort!")
-            return None
+## while the population is under 10 000, we continue to grow it
+while pop < 10000 :
+    pop *= growth_factor
+    generation += 1
+    print("generation",generation,"- population:",pop)
+print("it took",generation,"generations to reach 10000 (actual population is",pop,')')
 
-    # Reverse the complement.
-    return complement[::-1]
-
-
-# Let's test our functions:
-input_seq = "ATAGAGCGATCGATCCCTAGCTA"
-revcomp_seq = reverse_complement(input_seq)
-revcomp_seq_2 = reverse_complement_2(input_seq)
-print("original              :", input_seq)
-print("reverse complemented  :", revcomp_seq)
-print("reverse complemented 2:", revcomp_seq_2)
-
-# Check against output of the online tool:
-online_result = "TAGCTAGGGATCGATCGCTCTAT"
-print("Is 'reverse_complement' result correct?", revcomp_seq == online_result)
-print("Is 'reverse_complement_2' result correct?", revcomp_seq_2 == online_result)
-
-
-
-# Bonus: shorter way of writing the function.
-def reverse_complement_3(seq):
-    nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
-    return "".join([nucleotide_complements[n] for n in seq])[::-1]
-
-# Bonus: benchmarking of the 3 functions.
-#        Uncomment the code below to run (it takes a little while to run).
-# Warning: %timeit is an iPython "magic" functions that benchmarks a function.
-#          This will only run a Jupyter notebook, not in a regular python shell.
-
-# test_sequence = "ATAGAGCGATCGATCCCTAG" * 10000
-# print("Benchmarking reverse_complement ...")
-# %timeit reverse_complement(test_sequence)
-# print("Benchmarking reverse_complement_2 ...")
-# %timeit reverse_complement_2(test_sequence)
-# print("Benchmarking reverse_complement_3 ...")
-# %timeit reverse_complement_3(test_sequence)
