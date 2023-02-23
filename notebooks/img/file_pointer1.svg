@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="37.445602mm"
+   height="29.46133mm"
+   viewBox="0 0 37.445602 29.46133"
+   version="1.1"
+   id="svg29919"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="file_pointer1.svg"
+   inkscape:export-filename="/home/wandrille/Documents/trainingProjects/First_steps_in_Python/first-steps-with-python-training/notebooks/img/file_pointer1.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs29913" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-84.610188"
+     inkscape:cy="85.875146"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1688"
+     inkscape:window-height="680"
+     inkscape:window-x="1985"
+     inkscape:window-y="732"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata29916">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-109.7891,-49.436001)">
+    <g
+       id="g29851"
+       transform="translate(95.264235,25.485224)">
+      <g
+         id="g27850">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.26458332"
+           x="20.183929"
+           y="36.045235"
+           id="text27174"><tspan
+             sodipodi:role="line"
+             id="tspan27172"
+             x="20.183929"
+             y="36.045235"
+             style="stroke-width:0.26458332">passionfruit</tspan><tspan
+             sodipodi:role="line"
+             x="20.183929"
+             y="39.573013"
+             style="stroke-width:0.26458332"
+             id="tspan27176">oranges</tspan><tspan
+             sodipodi:role="line"
+             x="20.183929"
+             y="43.100792"
+             style="stroke-width:0.26458332"
+             id="tspan27178">apples</tspan><tspan
+             sodipodi:role="line"
+             x="20.183929"
+             y="46.628567"
+             style="stroke-width:0.26458332"
+             id="tspan27180">grapefruit </tspan><tspan
+             sodipodi:role="line"
+             x="20.183929"
+             y="50.156345"
+             style="stroke-width:0.26458332"
+             id="tspan27182">pointed sticks</tspan></text>
+        <g
+           id="g27814"
+           transform="translate(-2.6458334,-2.1166665)">
+          <g
+             id="g27806">
+            <path
+               style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.24341667;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               d="m 17.29241,28.192782 h 33.694093 l 3.508091,3.508091 2e-6,23.706193 H 17.29241 Z"
+               id="rect27184"
+               inkscape:connector-curvature="0"
+               sodipodi:nodetypes="cccccc" />
+            <path
+               style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.24341667;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               d="M 54.494594,31.672526 H 50.986503 V 28.164434"
+               id="rect27187"
+               inkscape:connector-curvature="0"
+               sodipodi:nodetypes="ccc" />
+          </g>
+          <rect
+             y="26.189152"
+             x="19.310223"
+             height="3.541321"
+             width="29.132378"
+             id="rect27190"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.24341667;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+          <text
+             id="text27194"
+             y="28.706709"
+             x="20.178848"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="stroke-width:0.26458332"
+               y="28.706709"
+               x="20.178848"
+               id="tspan27192"
+               sodipodi:role="line">data/passionfruit.txt</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

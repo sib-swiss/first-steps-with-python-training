@@ -1,38 +1,3 @@
-# Import the csv module.
-import csv
-
-# Create empty lists to store the strain, region and country data.
-strain = []
-region = []
-country = []
-
-# Open the input file in read mode, and read through it.
-with open("data/genbank.sars-cov2.metadata.csv", "r") as f:
-
-    # Load the file handle as a "DictReader" object. This can then
-    # be looped over, and each line in the file (except the header)
-    # is returned as a dictionary of {field_1: value, field_2: value, ...}
-    reader = csv.DictReader(f , delimiter=';')
-
-    for row in reader:
-        strain.append(row['strain'])
-        region.append(row['region'])
-        country.append(row['country'])
-
-# Let's print the length of our 3 lists:
-print(len(strain), "strains")
-print(len(region), "regions")
-print(len(country), "countries")
-
-# And the first 3 entries of each list:
-print("strains   :", strain[:3])
-print("regions   :", region[:3])
-print("countries :", country[:3])
-
-
-
-# Alternative solution, using only python built-in functions (no csv library)
-# ***************************************************************************
 strain = []
 region = []
 country = []
@@ -52,6 +17,26 @@ with open(input_path, mode="r") as f:
         strain.append(sl[0])
         region.append(sl[1])
         country.append(sl[2])
+
+# Let's print our 3 lists:
+print(len(strain), "strains")
+print(len(region), "regions")
+print(len(country), "countries")
+
+# the first 3 entries of each lists:
+print("strains   :", strain[:3])
+print("regions   :", region[:3])
+print("countries :", country[:3])
+
+
+
+# Alternative solution, using the pandas external module (a sneak peak of day 3 modules)
+# **************************************************************************************
+import pandas as pd
+df = pd.read_csv( "data/genbank.sars-cov2.metadata.csv" , sep=";" )
+strain  = list( df.strain )
+region  = list( df.region )
+country = list( df.country )
 
 # Let's print our 3 lists:
 print(len(strain), "strains")
