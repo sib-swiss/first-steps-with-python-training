@@ -1,3 +1,4 @@
+# Exercise 1.7
 
 # The % operator returns the remainder of the Euclidean division of two
 # numbers.

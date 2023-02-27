@@ -1,3 +1,4 @@
+# Exercise 1.5
 
 # 1. Create a dictionary with the classification of the Python genus
 # ******************************************************************
@@ -9,8 +10,8 @@ pythons = {
 }
 
 
-# 2. Add an entry for species
-# ***************************
+# 2. Add an entry for "Species"
+# *****************************
 # Since we are asked to add 2 or more species, we must use some type of
 # container object: e.g. a list or a tuple.
 pythons["Species"] = ["molurus", "regius", "bivittatus"]

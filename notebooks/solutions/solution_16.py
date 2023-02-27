@@ -1,3 +1,4 @@
+# Exercise 1.6
 
 science_doc = {
     "Agricultural sciences": 1065,

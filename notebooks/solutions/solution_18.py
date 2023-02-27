@@ -1,3 +1,4 @@
+# Exercise 1.8
 
 canton_list = [
     "Zürich",
