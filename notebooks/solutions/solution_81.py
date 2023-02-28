@@ -56,17 +56,19 @@ print("Mean values per row for sample 2 replicates:\n", mean_s2)
 std_s1 = np.std(log_data[:, s1_columns], axis=1)
 std_s2 = np.std(log_data[:, s2_columns], axis=1)
 print("Std values per row for sample 1 replicates:\n", mean_s1)
-print("Std values per row for sample 2 replicates:\n", mean_s2
+print("Std values per row for sample 2 replicates:\n", mean_s2)
 
 
-# 5. Use a function *scipy.stats.ttest_ind* to calculate p-value for every row
+# 5. Use scipy.stats.ttest_ind() to calculate p-value for every row
+# *****************************************************************
+ttest_pvalues = stats.ttest_ind(log_data[:,s1_columns], log_data[:,s2_columns], axis=1, equal_var=False).pvalue
 
-TTest_pValues = stats.ttest_ind(log_data[:,s1_columns], log_data[:,s2_columns], axis=1, equal_var=False).pvalue
 
 # 6. Select p-values which are smaller than $10^{-2}$
+# ***************************************************
+significant = ttest_pvalues < 10**-2
 
-significant = TTest_pValues < 10**-2
 
-# 7. Print how many P-values below $10^{-2}$ are found
-
-print( 'there are',sum(significant),'p-values <0.01.')
+# 7. Print how many p-values below $10^{-2}$ are found
+# ****************************************************
+print('There are', sum(significant), 'p-values <0.01.')
