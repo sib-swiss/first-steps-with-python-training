@@ -2,7 +2,10 @@
 
 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7188453.svg)](https://doi.org/10.5281/zenodo.7188453)
+
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7743768.svg)](https://doi.org/10.5281/zenodo.7743768)
 
 
 # First steps with Python in Life Sciences
@@ -56,4 +59,4 @@ solutions codes can be found in the [`notebooks/solutions/`](notebooks/solutions
 
 If you use/reuse this material, please cite as:
 
-Wandrille Duchemin, Robin Engler, Orlin Topalov, & Sina Majidian. (2022, October 12). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.7188453
+Robin Engler, Wandrille Duchemin, & Orlin Topalov. (2023, March 17). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.7743768
