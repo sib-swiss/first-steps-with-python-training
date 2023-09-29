@@ -4,7 +4,6 @@ country = []
 
 input_path = "data/genbank.sars-cov2.metadata.csv"
 with open(input_path, mode="r") as f:
-
     # Read the header line to skip it: we do not want to store that data.
     l = f.readline()
 
@@ -31,14 +30,14 @@ print("regions   :", region[:3])
 print("countries :", country[:3])
 
 
-
 # Alternative solution, using the pandas external module (a sneak peak of day 3 modules)
 # **************************************************************************************
 import pandas as pd
-df = pd.read_csv( "data/genbank.sars-cov2.metadata.csv" , sep=";" )
-strain  = list( df.strain )
-region  = list( df.region )
-country = list( df.country )
+
+df = pd.read_csv("data/genbank.sars-cov2.metadata.csv", sep=";")
+strain = list(df.strain)
+region = list(df.region)
+country = list(df.country)
 
 # Let's print our 3 lists:
 print(len(strain), "strains")
