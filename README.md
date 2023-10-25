@@ -1,5 +1,5 @@
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7743768.svg)](https://doi.org/10.5281/zenodo.7743768)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8376825.svg)](https://doi.org/10.5281/zenodo.8376825)
 
 # First steps with Python in Life Sciences
 
@@ -92,5 +92,4 @@ Data and solutions:
 
 If you use/reuse this material, please cite as:
 
-Wandrille Duchemin, Robin Engler and Orlin Topalov, 2023. Course material First
-steps with Python in Life Sciences. Zenodo. <https://doi.org/10.5281/zenodo.7743768>
+Robin Engler, Wandrille Duchemin, & Topalov, O. (2023, September 25). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.8376825
