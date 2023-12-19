@@ -2,7 +2,7 @@
   "title": "Course material First steps with Python in Life Sciences",
   "keywords": [
     "programming",
-    "R",
+    "python",
     "course",
     "training"
   ],
@@ -14,6 +14,10 @@
     {
       "name": "Wandrille Duchemin",
       "affiliation": "SIB Swiss Institute of Bioinformatics"
-    }   
+    },
+    {
+      "name": "Orlin Topalov",
+      "affiliation": "SIB Swiss Institute of Bioinformatics"
+    } 
   ]
 }
