@@ -1,57 +1,24 @@
-# Exercise 1.4
+# Exercise 1.3
 
-seq = "GTGCCCCTCGAGAGGAGGGCGCGCGCCGCGCGCTCGACGCGATCGGCGCTCAGCGAGCGAGCTCCTCGAAGCGATCCGCGCGCGCT"
-pattern = "CTCGA"
-print(seq.find("CTCGA"))
+# 1. Store our favorite quote as a string variable
+# ************************************************
+quote = "Regarde-moi, mon cher, et dis moi quelle espérance pourrait bien me laisser cette protubérance!"
+quote = "Are you suggesting coconuts migrate ?"
 
-# Limitation:
-# find() only returns the 1st occurrence of the motif...
-# To find other occurrences of "CTCGA", we can use the optional argument
-# "start" of the "find()" method and pass the index of the last found
-# motif + 1:
-print(seq.find("CTCGA", 7))
-print(seq.find("CTCGA", 33))
-print(seq.find("CTCGA", 65))  # "find()" returns -1 when no match is found.
-
-
-# Alternatives using loops
-# ************************
-# Of course, it would be nicer to automate this:
-# Here is a sneak peak at how to do this using loops, which we'll see in
-# the next Notebook.
-
-# Instantiate a list where we will store the motif positions, and get the
-# position of the first match.
-positions = []
-pos = seq.find("CTCGA")
-
-# This is a loop that will run as long as new matches are found...
-while pos != -1:
-    positions.append(pos)             # Add motif position to result list.
-    pos = seq.find("CTCGA", pos + 1)  # Attempt to find another motif.
-
-print(positions)
+# 2. Replace all spaces by '@' characters in the quote
+# ****************************************************
+# Since "quote" is a string, we look at "help(str)" to search for methods
+# of str objects. We can see that there is a "replace()" method that allows
+# replacing characters within a string.
+modified_quote = quote.replace(" ", "@")
+print(quote)
+print(modified_quote)
 
 
-# Note: starting with python 3.8, the "walrus" operator ":=" can be used
-# to write the code is a more condensed fashion.
-#
-# The := operator allows to assign a value to a variable (here "pos"), and
-# evaluate an expression at the same time.
-pos = -1
-positions = []
-while (pos := seq.find("CTCGA", pos + 1)) != -1:
-    positions.append(pos)
-print(positions)
-
-
-# Alternative using regexp.
-# A more efficient approach would be to use the external module "re" that
-# provides regular-expression matching.
-import re
-pattern = "CTCGA"
-print("The number of occurrences of the pattern in seq is:", len(re.findall(pattern, seq)))
-
-print("The start positions of the pattern in seq is:")
-for match in re.finditer(pattern, seq):
-    print(match.start())
+# Alternative using the "split()" and "join()" method: we split the quote
+# on whitespaces (removing all spaces), and then concatenate the words
+# back using "@", essentially replacing white spaces with "@".
+# Note that this will also e.g. replace "\t" and "\n", since they are
+# white spaces, unless we explicitly pass " " to split().
+print("@".join(quote.split()))
+print("@".join(quote.split(" ")))  # Avoids replacing "\t" or "\n"
