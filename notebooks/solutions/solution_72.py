@@ -1,89 +1,49 @@
-### 7.2
+### 7.3
 
-# **1.** For this and the following exercises we will work only with
-# the **first accession**.
-# Retrieve the sequence record for the first accession from Genbank
-# using `Bio.Entrez`. Keep this record as a new variable.
+# In this exercise, we will find the 'gene' and 'CDS' features for the spike
+# protein. The spike protein (S protein) is a large type I trans-membrane
+# protein, which is highly glycosylated. 
+# Spike proteins assemble into trimers on the virion surface to form the
+# distinctive "corona", or crown-like appearance. The gene is usually called
+# the **S** gene and the protein product is called **surface glycoprotein**.
 
-from Bio import Entrez
-from Bio import SeqIO
+# **1.** First, write a function, which accepts a single argument, a record,
+# which has to be of `SeqRecord` type. 
+# This function should loop over all features of this record and return a
+# `list` of features whose `.type` is either **'gene' or 'CDS'**. You will
+# use this function in all other questions of **7.3**!
 
-Entrez.email = "A.N.example@institute.ch"
-handle = Entrez.efetch(db="nucleotide", id=accessions[0], rettype="gb", retmode="text")
-rec = SeqIO.read(handle, "genbank")
-handle.close()
-
-
-# What is the `id`, `name` and `description` of this record?
-
-print("ID={}\nName={}\nDescription={}".format(
-    rec.id, rec.name, rec.description)
-)
-
-# Confirm that the ID of this record matches the first accession in the
-# accessions text file. Based on these information, can you guess in which
-# country this isolate was identified?
-
-print("Accession IDs do match:", rec.id == accessions[0])
-print("Country of origin could be", rec.description.split("/")[2])
+def get_gene_cds_features(rec):
+    result = []
+    for feature in rec.features:
+        if feature.type in ['CDS', 'gene']:
+            result.append(feature)
+    return result
 
 
-# **2.** How many entries are there in the `annotations` of this record?
+# Using this function, print the **keys** of the qualifiers for all 'gene'
+# and 'CDS' features. 
+# What is the single **key** that can be found in all qualifiers?
+# *Hint:* Qualifiers are a special kind of dictionary called OrderedDict.
+# Their keys can be accessed by the `.keys()` method.
 
-print("There are", len(rec.annotations), "annotations associated with this record")
+for feature in get_gene_cds_features(rec):
+    print("{}: {}".format(feature.type, list(feature.qualifiers.keys())))
 
-# Print the 'taxonomy' and the 'references' of this record. What is the title
-# of the publication this sequence was published?
+# **2.**  Now, using the same function, print the `'gene'` qualifier for all.
+# Can you spot the 'S' gene?
 
-print(rec.annotations["taxonomy"])
-print(rec.annotations["references"])
-print()
-print("Method of submission:", rec.annotations["references"][0].title)
-
-
-# **3.** How many entries are there in the `features` of this record?
-# Print the first feature.
-
-print("There are", len(rec.features), "features")
-print(rec.features[0])
-
-# This is a 'source' feature and usually there is a single 'source' feature
-# for a record. It holds like the 'annotations' very useful information about
-# the source of this record. Can you confirm the country of origin?
-print("The place of origin for this isolate is", rec.features[0].qualifiers["country"][0])
-
-# How many different possible values are there for the `type` of these
-# features and what are they?
-
-# Using a list.
-feature_types = []
-for feature in rec.features:
-    if feature.type not in feature_types:
-        feature_types.append(feature.type)
-print("There are {} different values for feature types".format(len(feature_types)))
-print(feature_types)
-
-# Optional - alternative using set
-feature_types_set = set([feature.type for feature in rec.features])
-print("There are {} different values for feature types".format(len(feature_types_set)))
-print(feature_types_set)
-
-# Can you spot the differences between the list and set versions?
-# Sets are very useful counters to hold unique members
-# Try help(set)
+for feature in get_gene_cds_features(rec):
+    print("{}: {}".format(feature.type, feature.qualifiers['gene']))
 
 
-# How many 'gene's does this viral genome have, according to the features? 
-# How many 'CDS's are defined in the features? Are the number of genes and
-# CDSs same?
-# *Hint*, dictionaries can be used to count multiple things within a single
-# loop.
+# **3.** Using the `'gene'` qualifier from the previous exercise, 
+# print the `location` of all 'gene' and 'CDS' features for the 'S' gene. 
 
-counter = {'CDS': 0, 'gene': 0}
-for feature in rec.features:
-    if feature.type in counter:
-        counter[feature.type] += 1
-print(counter)
+# *Attention, the value of the `'gene'` qualifier is a `list`*
 
 
+for feature in get_gene_cds_features(rec):
+    if feature.qualifiers['gene'][0] == "S":
+        print("{}: {}".format(feature.type, feature.location))
 
