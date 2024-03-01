@@ -33,6 +33,8 @@ Please ensure you have installed all the required software as indicated in the
   otherwise provide a mean of communication between participants and trainers
   (e.g. to share code snippets).
 
+<br>
+
 ## Course material organization
 
 The course revolves around a series of jupyter notebooks that take you on your
