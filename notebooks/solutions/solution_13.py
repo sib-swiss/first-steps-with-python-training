@@ -27,7 +27,7 @@ pos = seq.find("CTCGA")
 
 # This is a loop that will run as long as new matches are found...
 while pos != -1:
-    positions.append(pos)             # Add motif position to result list.
+    positions.append(pos)  # Add motif position to result list.
     pos = seq.find("CTCGA", pos + 1)  # Attempt to find another motif.
 
 print(positions)
@@ -49,8 +49,11 @@ print(positions)
 # A more efficient approach would be to use the external module "re" that
 # provides regular-expression matching.
 import re
+
 pattern = "CTCGA"
-print("The number of occurrences of the pattern in seq is:", len(re.findall(pattern, seq)))
+print(
+    "The number of occurrences of the pattern in seq is:", len(re.findall(pattern, seq))
+)
 
 print("The start positions of the pattern in seq is:")
 for match in re.finditer(pattern, seq):

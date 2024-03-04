@@ -10,7 +10,7 @@ letter_counts = {}
 # Loop through the quote, one character at a time.
 for char in quote:
     # Test whether the current character is already present in the dictionary.
-    if not char in letter_counts:
+    if char not in letter_counts:
         # If not, initialize its count value to 0.
         letter_counts[char] = 0
 
@@ -36,7 +36,7 @@ for char in quote.lower():
         continue
 
     # Test whether the current letter is already present in the dictionary.
-    if not char in letter_counts:
+    if char not in letter_counts:
         # If not, initialize its count value to 0.
         letter_counts[char] = 0
 
