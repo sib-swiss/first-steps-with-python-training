@@ -65,11 +65,13 @@ following sections:
 <br>
 
 ## Detailed schedule
-Please note that this schedule is approximate and might slightly change dependin on the progress
-of the class.
+
+Please note that this schedule is approximate and might change depending on
+the progress of the class.
 
 ### Day 1
-* 09h00: Welcome and setup.
+
+* 09h00: Welcome and setup
 * 09h15: Intro to python
 * 09h45: Module 0 + fix people's problems with Jupyter
 * 10h15: Break
@@ -106,7 +108,7 @@ of the class.
 * 10h50: Optional modules session 1
 * 12h00: Break
 * 13h00: Optional modules session 1 (continued)
-* 14h15: Admin stuff (examp, feedback, etc)
+* 14h15: Admin stuff (exam, feedback, etc)
 * 14h30: Break
 * 14h45: Optional module 2
 * 17h00: End of day 3
