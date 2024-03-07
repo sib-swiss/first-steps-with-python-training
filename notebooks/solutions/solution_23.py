@@ -19,7 +19,6 @@ for char in quote:
 
 
 # Let's now print the results by looping over each key in the dictionary.
-# We additionally sort the output in alphabetical order.
 # Iterating over key value pairs in a dictionary can be elegantly achieved
 # using a dictionary's "items()" method:
 for letter, count in letter_counts.items():
@@ -51,6 +50,7 @@ for char in quote.lower():
     if char.isalpha() and char not in letter_counts:
         letter_counts[char] = quote.lower().count(char)
 
+# Print the letter counts in alphabetical order.
 for letter in sorted(letter_counts):
     print(letter, letter_counts[letter], sep=" -> ")
 
@@ -66,5 +66,6 @@ letter_counts = {
     x: quote.lower().count(x) for x in sorted(set(quote.lower())) if x.isalpha()
 }
 
+# Print the letter counts in alphabetical order.
 for letter in sorted(letter_counts):
     print(letter, letter_counts[letter], sep=" -> ")
