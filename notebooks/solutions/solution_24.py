@@ -69,7 +69,7 @@ print("Is 'reverse_complement_2' result correct?", revcomp_seq_2 == online_resul
 # Bonus: shorter way of writing the function.
 def reverse_complement_3(seq):
     nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
-    return "".join([nucleotide_complements[n] for n in seq])[::-1]
+    return "".join(nucleotide_complements[n] for n in seq[::-1])
 
 
 # Bonus: benchmarking of the 3 functions.
