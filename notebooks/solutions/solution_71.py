@@ -8,33 +8,28 @@
 from Bio import Entrez
 from Bio import SeqIO
 
+accession_id = "MT385458.1"
 Entrez.email = "A.N.example@institute.ch"
-handle = Entrez.efetch(db="nucleotide", id=accessions[0], rettype="gb", retmode="text")
+handle = Entrez.efetch(db="nucleotide", id=accession_id, rettype="gb", retmode="text")
 rec = SeqIO.read(handle, "genbank")
 handle.close()
 
 
 # What is the `id`, `name` and `description` of this record?
-
-print("ID={}\nName={}\nDescription={}".format(
-    rec.id, rec.name, rec.description)
-)
+print("ID={}\nName={}\nDescription={}".format(rec.id, rec.name, rec.description))
 
 # Confirm that the ID of this record matches the first accession in the
 # accessions text file. Based on these information, can you guess in which
 # country this isolate was identified?
-
-print("Accession IDs do match:", rec.id == accessions[0])
+print("Accession IDs do match:", rec.id == accession_id)
 print("Country of origin could be", rec.description.split("/")[2])
 
 
 # **2.** How many entries are there in the `annotations` of this record?
-
 print("There are", len(rec.annotations), "annotations associated with this record")
 
 # Print the 'taxonomy' and the 'references' of this record. What is the title
 # of the publication this sequence was published?
-
 print(rec.annotations["taxonomy"])
 print(rec.annotations["references"])
 print()
@@ -43,14 +38,15 @@ print("Method of submission:", rec.annotations["references"][0].title)
 
 # **3.** How many entries are there in the `features` of this record?
 # Print the first feature.
-
 print("There are", len(rec.features), "features")
 print(rec.features[0])
 
 # This is a 'source' feature and usually there is a single 'source' feature
 # for a record. It holds like the 'annotations' very useful information about
 # the source of this record. Can you confirm the country of origin?
-print("The place of origin for this isolate is", rec.features[0].qualifiers["country"][0])
+print(
+    "The place of origin for this isolate is", rec.features[0].qualifiers["country"][0]
+)
 
 # How many different possible values are there for the `type` of these
 # features and what are they?
@@ -73,17 +69,14 @@ print(feature_types_set)
 # Try help(set)
 
 
-# How many 'gene's does this viral genome have, according to the features? 
+# How many 'gene's does this viral genome have, according to the features?
 # How many 'CDS's are defined in the features? Are the number of genes and
 # CDSs same?
 # *Hint*, dictionaries can be used to count multiple things within a single
 # loop.
 
-counter = {'CDS': 0, 'gene': 0}
+counter = {"CDS": 0, "gene": 0}
 for feature in rec.features:
     if feature.type in counter:
         counter[feature.type] += 1
 print(counter)
-
-
-
