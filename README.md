@@ -1,14 +1,12 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10829064.svg)](https://doi.org/10.5281/zenodo.10829064)
 
-
-
 # First steps with Python in Life Sciences
 
 This is the course material of the "First Steps with Python in Life Science"
 three-day course of [SIB-training](https://www.sib.swiss/training/who-can-benefit)
 
-The course is addressed to beginners wanting to become familiar with the
+The course is addressed to **beginners** wanting to become familiar with the
 Python syntax, environment, and the most common commands.
 
 This course material provides an introduction to [python](https://www.python.org)
@@ -92,8 +90,108 @@ Data and solutions:
 * Solutions can be found in the [`notebooks/solutions/`](notebooks/solutions/)
   directory, but can also be loaded directly from the exercise notebooks.
 
+<br>
+
+## Course description
+
+### Overview
+
+Have you ever been stuck with a file format that doesn't precisely conform to
+your needs, found yourself doing annoyingly repetitive data manipulations, or
+struggled to efficiently manage and explore your data? Python to the rescue!
+
+Python is an **open-source and general-purpose programming language** which
+runs on all major operating systems. It was designed to be easily read and
+written with a comparatively simple syntax, and is thus a good choice for
+beginners in programming.
+
+Python is applied in many disciplines and is
+**one of the most common languages for bioinformatics**. The Python community
+enthusiastically maintains a rich collection of libraries/modules for
+everything from web development to machine learning.
+
+In this **3-days course for beginners**, participants will learn the basic
+concepts, data types and code structures necessary to solve routine data
+manipulation tasks.
+It also covers the concepts, terminology, and approach to documentation
+required to further develop skills in Python programming independently, helping
+participants to take control of their research questions in an independent
+manner.
+
+Topics covered by this course include:
+
+* A basic introduction to Python and computing in general.
+* Overview of the basic data types in python, such as strings, numbers, lists,
+  tuples, and dictionaries.
+* Overview of the basic code structures: if/else, for loops and functions.
+* Writing your own functions.
+* Reading from and writing to files.
+* Best practices in Python programming.
+* Debugging and documentation.
+* Installing and importing external libraries/modules.
+* Introduction to some useful python libraries in data science: pandas,
+  matplotlib, scipy, numpy, biopython (note: participants can elect the modules
+  they wish to look at, so not everyone will go through all libraries).
+
+### Audience
+
+The course is addressed to **beginners** who want to become familiar with
+writing Python code to accomplish common tasks such as automated data parsing,
+basic statistical operations and graphical representations.
+
+For people who are proficient in programming: this course might be on the
+**slow side** for you and an intermediate python class is recommended (check
+regularly our upcoming training courses).
+
+### Learning objectives
+
+By the end of this course, participants will be familiar with the following
+basic python concepts:
+
+* Basic data types in python (strings, numbers, lists,  tuples, dictionaries).
+* Basic code structures: if/else, for loops and functions.
+* Writing functions.
+* Reading from and writing to files.
+* Installing and importing external libraries/modules.
+* Debugging and documentation.
+
+Participants will also gain an overview of the Python ecosystem and some of
+its popular libraries in data science and bioinformatics. The basic concepts
+learned in the course should also enable them to further self-study specific
+topics of interest and/or attend more advanced python training courses.
+
+### Prerequisites
+
+#### Knowledge / competencies
+
+This course is designed for beginners; there is no requirement for previous
+knowledge in Python or programming. However, we encourage people to be have
+some familiarity with basic shell/terminal commands (e.g. navigating the
+filesystem in command line). For people with no experience of shell commands,
+we recommend either taking the SIB's "First Steps with UNIX" course, or
+completing the SIB's ["First Steps with UNIX" e-learning module](https://edu.sib.swiss/pluginfile.php/2878/mod_resource/content/4/couselab-html/content.html).
+Basic concepts of algorithmics is also a plus for this course.
+
+#### Technical
+
+Participants are required to have their own laptop with a reasonably recent
+version of Python installed (version `>= 3.10`), as well as the
+[jupyter notebook](https://jupyter.org) environment.
+
+For this course, we suggest to install Python via
+[Anaconda](https://docs.continuum.io) - a free and
+operating system (OS)-agnostic platform for installing Python libraries and
+environments. Anaconda is bundled with Anaconda Navigator, a graphical user
+interface which will help ease you into what Python makes possible. For
+details, please see the **[environment setup](setting_up_your_environment.md)**
+section of the course webpage.
+
+<br>
+
 ## Citation
 
 If you use/reuse this material, please cite as:
 
-Robin Engler, Wandrille Duchemin, & Orlin Topalov. (2024, March 18). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.10829064
+Robin Engler, Wandrille Duchemin, & Orlin Topalov. (2024, March 18). Course
+material First steps with Python in Life Sciences.
+Zenodo, https://doi.org/10.5281/zenodo.10829064.
