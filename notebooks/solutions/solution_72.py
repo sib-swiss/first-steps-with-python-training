@@ -1,4 +1,4 @@
-### 7.3
+### 7.2
 
 # In this exercise, we will find the 'gene' and 'CDS' features for the spike
 # protein. The spike protein (S protein) is a large type I trans-membrane
@@ -11,7 +11,7 @@
 # which has to be of `SeqRecord` type. 
 # This function should loop over all features of this record and return a
 # `list` of features whose `.type` is either **'gene' or 'CDS'**. You will
-# use this function in all other questions of **7.3**!
+# use this function in all other questions of **7.2**!
 
 def get_gene_cds_features(rec):
     result = []

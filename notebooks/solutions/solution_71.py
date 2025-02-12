@@ -45,7 +45,7 @@ print(rec.features[0])
 # for a record. It holds like the 'annotations' very useful information about
 # the source of this record. Can you confirm the country of origin?
 print(
-    "The place of origin for this isolate is", rec.features[0].qualifiers["country"][0]
+    "The place of origin for this isolate is", rec.features[0].qualifiers["geo_loc_name"][0]
 )
 
 # How many different possible values are there for the `type` of these

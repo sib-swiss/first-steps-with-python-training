@@ -1,4 +1,4 @@
-### 7.4
+### 7.3
 
 # **1.** Create a new record by **slicing** the previous record using the
 # coordinates of the 'S' gene.

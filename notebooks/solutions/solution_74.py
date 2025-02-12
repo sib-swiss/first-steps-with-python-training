@@ -1,4 +1,4 @@
-### 7.5
+### 7.4
 
 # **1.** In **"SARS-CoV-2_S.gb"** file, you will find the GenBank sequence
 # records of the 'S' gene for the first 50 accessions we used in previous
