@@ -1,24 +1,26 @@
 # Note for the correction:
 # We here allow the population to be float numbers, but one could also
-# constrain it to be integers only
+# constrain it to be integers only.
 
 # 1. Simulate a few generation. How large is the population after 3 generations?
 pop = 1000
 growth_factor = 1.5
 print("generation 0 - population:", pop)
 
-pop *= growth_factor  # 1st generation: population is multiplied by growth factor.
+# At each generation, the population is multiplied by growth factor.
+pop *= growth_factor
 print("generation 1 - population:", pop)
-pop *= growth_factor  # 2nd generation: population is multiplied by growth factor.
+pop *= growth_factor
 print("generation 2 - population:", pop)
-pop *= growth_factor  # 3rd generation: population is multiplied by growth factor.
+pop *= growth_factor
 print("generation 3 - population:", pop)
 
-# As can be seen here, duplicating code is sort of possible when we only do a
-# few generation, but it quickly becomes tedious and error prone. So using a
-# loop is a much better solution.
+# As can be seen here, duplicating code is only practical when doing a few
+# generation, beyond that it quickly becomes tedious and error prone.
+# Using a loop is a much better solution.
 pop = 1000
 growth_factor = 1.5
+
 for generation in range(3):
     pop *= growth_factor
     print("generation", generation, "- population:", pop)
@@ -32,7 +34,7 @@ pop = 1000
 growth_factor = 1.5
 generation = 0
 
-## While the population is under 10'000, we continue to grow it.
+# While the population is under 10'000, we continue to grow it.
 while pop < 10_000:
     pop *= growth_factor
     generation += 1
