@@ -1,5 +1,6 @@
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10829064.svg)](https://doi.org/10.5281/zenodo.10829064)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15038282.svg)](https://doi.org/10.5281/zenodo.15038282)
+
 
 # First steps with Python in Life Sciences
 
@@ -192,6 +193,4 @@ section of the course webpage.
 
 If you use/reuse this material, please cite as:
 
-Robin Engler, Wandrille Duchemin, & Orlin Topalov. (2024, March 18). Course
-material First steps with Python in Life Sciences.
-Zenodo, https://doi.org/10.5281/zenodo.10829064.
+Engler, R., Duchemin, W., & Topalov, O. (2025, March 13). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.15038282
