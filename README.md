@@ -29,7 +29,7 @@ Please ensure you have installed all the required software as indicated in the
 * **Course material**: the easiest way to get the course material is to
   download the `.zip` file of the latest release that is available by
   **[clicking on this link](https://github.com/sib-swiss/first-steps-with-python-training/releases/latest)**.
-* **[Google doc](https://docs.google.com/document/d/1S8Pbm6AaA_J6SNCLURmvGQRRSFHA43wVJR-P9ZQQYzo/edit?usp=sharing)**:
+* **[shared document](https://sibcloud-my.sharepoint.com/:w:/g/personal/wandrille_duchemin_sib_swiss/EVawgnUe2ORFoCYZ_oN7NwMBWuLTr6Vex4IRP727Io1hug?e=0m0EeZ)**:
   can be used to ask questions (especially for courses taught online) or
   otherwise provide a mean of communication between participants and trainers
   (e.g. to share code snippets).
