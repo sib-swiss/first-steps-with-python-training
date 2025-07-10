@@ -1,5 +1,6 @@
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10829064.svg)](https://doi.org/10.5281/zenodo.10829064)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15038282.svg)](https://doi.org/10.5281/zenodo.15038282)
+
 
 # First steps with Python in Life Sciences
 
@@ -28,7 +29,7 @@ Please ensure you have installed all the required software as indicated in the
 * **Course material**: the easiest way to get the course material is to
   download the `.zip` file of the latest release that is available by
   **[clicking on this link](https://github.com/sib-swiss/first-steps-with-python-training/releases/latest)**.
-* **[Google doc](https://docs.google.com/document/d/1S8Pbm6AaA_J6SNCLURmvGQRRSFHA43wVJR-P9ZQQYzo/edit?usp=sharing)**:
+* **[shared document](https://sibcloud-my.sharepoint.com/:w:/g/personal/wandrille_duchemin_sib_swiss/EVawgnUe2ORFoCYZ_oN7NwMBWuLTr6Vex4IRP727Io1hug?e=0m0EeZ)**:
   can be used to ask questions (especially for courses taught online) or
   otherwise provide a mean of communication between participants and trainers
   (e.g. to share code snippets).
@@ -192,6 +193,4 @@ section of the course webpage.
 
 If you use/reuse this material, please cite as:
 
-Robin Engler, Wandrille Duchemin, & Orlin Topalov. (2024, March 18). Course
-material First steps with Python in Life Sciences.
-Zenodo, https://doi.org/10.5281/zenodo.10829064.
+Engler, R., Duchemin, W., & Topalov, O. (2025, March 13). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.15038282

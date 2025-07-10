@@ -52,22 +52,43 @@ def reverse_complement_2(seq):
     return complement[::-1]
 
 
+def reverse_complement_3(seq):
+    """Returns the reverse complement of a sequence given as argument.
+
+    This is an implementation that replaces all nucleotides in the
+    sequence instead of looping over it. This requires the little trick
+    of replacing the nucleotides with lower case letters, before upper
+    casing them again.
+    """
+    return (
+        seq.upper()
+        .replace("A", "t")
+        .replace("T", "a")
+        .replace("G", "c")
+        .replace("C", "g")
+        .upper()[::-1]
+    )
+
+
 # Let's test our functions:
 input_seq = "ATAGAGCGATCGATCCCTAGCTA"
 revcomp_seq = reverse_complement(input_seq)
 revcomp_seq_2 = reverse_complement_2(input_seq)
+revcomp_seq_3 = reverse_complement_3(input_seq)
 print("original              :", input_seq)
 print("reverse complemented  :", revcomp_seq)
 print("reverse complemented 2:", revcomp_seq_2)
+print("reverse complemented 3:", revcomp_seq_3)
 
 # Check against output of the online tool:
 online_result = "TAGCTAGGGATCGATCGCTCTAT"
 print("Is 'reverse_complement' result correct?", revcomp_seq == online_result)
 print("Is 'reverse_complement_2' result correct?", revcomp_seq_2 == online_result)
+print("Is 'reverse_complement_3' result correct?", revcomp_seq_3 == online_result)
 
 
-# Bonus: shorter way of writing the function.
-def reverse_complement_3(seq):
+# Bonus: shorter way of writing the solution 2.
+def reverse_complement_2b(seq):
     nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
     return "".join(nucleotide_complements[n] for n in seq[::-1])
 
@@ -82,5 +103,7 @@ def reverse_complement_3(seq):
 # %timeit reverse_complement(test_sequence)
 # print("Benchmarking reverse_complement_2 ...")
 # %timeit reverse_complement_2(test_sequence)
+# print("Benchmarking reverse_complement_2b ...")
+# %timeit reverse_complement_2b(test_sequence)
 # print("Benchmarking reverse_complement_3 ...")
 # %timeit reverse_complement_3(test_sequence)
