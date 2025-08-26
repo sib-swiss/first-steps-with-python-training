@@ -1,43 +1,47 @@
-# Exercise 4.2
 
-import os  # Import the os module into the global namespace.
+# 1. What does "mysterious_function()" do?
+# ****************************************
+# "mysterious_function()" takes a number "n" and multiplies it by the result
+# of "mysterious_function(n-1)", unless "n" is lower or equal to 1 in which
+# case it returns 1.
+#
+# Let's see what happens with n = 4:
+#   mysterious_function(4)  ->  4 * mysterious_function(3)
+#   mysterious_function(4)  ->  4 * 3 * mysterious_function(2)
+#   mysterious_function(4)  ->  4 * 3 * 2 * mysterious_function(1)
+#   mysterious_function(4)  ->  4 * 3 * 2 * 1
+#   mysterious_function(4)  ->  24
+#
+# So, "mysterious_function" computes the product of all positive integers
+# lower or equal to "n". In other words, it computes a factorial !
+# (see https://en.wikipedia.org/wiki/Factorial)
 
-# We re-use the function from exercise 4.2, and add an optional argument
-# "ignore_hidden" that, when set to "True", will ignore hidden files (i.e.
-# files whose name is starting with a dot, e.g. ".DS_Store")
-
-
-def count_files(dir_name, ignore_hidden=False):
-    """Counts files present in the input directory.
-    Only files are counted, directories are ignored.
-
-    Arguments:
-        dir_name: path of directory in which to count files.
-        ignore_hidden: Optional. If set to True, hidden files (files that
-            start with a '.') are ignored from the count.
-    """
-
-    # Initialize file counter.
-    file_count = 0
-
-    # Loop through all files and directories present in the input directory.
-    for path in os.listdir(path=dir_name):
-        # Get the absolute path of the file/directory.
-        full_path = os.path.join(dir_name, path)
-
-        # Verify the path corresponds to a file, not a directory.
-        if os.path.isfile(full_path) and not (ignore_hidden and path.startswith(".")):
-            file_count += 1
-
-    return file_count
+# Having a function calling itself is called a recursion.
+# It is a method commonly used when the solution to a problem can be defined
+# using solution(s) to smaller instance(s) of the same problem.
 
 
-parent_dir = os.path.dirname(os.getcwd())
-print("File count in [", parent_dir, "]: ", count_files(parent_dir), sep="")
-print(
-    "File count (excluding hidden files) in [",
-    parent_dir,
-    "]: ",
-    count_files(parent_dir, ignore_hidden=True),
-    sep="",
-)
+# 2. Write a function that gives the same result, but using a "for" loop
+# **********************************************************************
+def factorial_using_loop(n):
+
+    # Treating the special case where n is lower or equal to 1.
+    # Note: in fact this is not really needed, since the "for" loop below
+    # does not run if n <= 1, and the function thus returns 1.
+    if n <= 1:
+        return 1  # Note: anytime the "return" keyword is called,
+                  # we exit the function immediately.
+
+    # Loop through numbers from 1 to n.
+    # Remember that in "range()"" the end point (second argument) is excluded.
+    fact = 1
+    for i in range(2, int(n) + 1):
+        # Increment the factorial.
+        fact *= i
+        # print(fact)                # Print was used while debugging.
+    return fact
+
+
+# Testing our function with the number 4.
+print("4! =", factorial_using_loop(4))
+print("4! =", factorial_using_loop(4.0))

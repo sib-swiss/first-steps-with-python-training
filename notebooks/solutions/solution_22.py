@@ -1,56 +1,24 @@
-# Note for the correction:
-# We here allow the population to be float numbers, but one could also
-# constrain it to be integers only.
+# Exercise 1.3
 
-# 1. Simulate a few generation. How large is the population after 3 generations?
-pop = 1000
-growth_factor = 1.5
-print("generation 0 - population:", pop)
+# 1. Store our favorite quote as a string variable
+# ************************************************
+quote = "Regarde-moi, mon cher, et dis moi quelle espérance pourrait bien me laisser cette protubérance!"
+quote = "Are you suggesting coconuts migrate ?"
 
-# At each generation, the population is multiplied by growth factor.
-pop *= growth_factor
-print("generation 1 - population:", pop)
-pop *= growth_factor
-print("generation 2 - population:", pop)
-pop *= growth_factor
-print("generation 3 - population:", pop)
-
-# As can be seen here, duplicating code is only practical when doing a few
-# generation, beyond that it quickly becomes tedious and error prone.
-# Using a loop is a much better solution.
-pop = 1000
-growth_factor = 1.5
-
-for generation in range(3):
-    pop *= growth_factor
-    print("generation", generation, "- population:", pop)
+# 2. Replace all spaces by '@' characters in the quote
+# ****************************************************
+# Since "quote" is a string, we look at "help(str)" to search for methods
+# of str objects. We can see that there is a "replace()" method that allows
+# replacing characters within a string.
+modified_quote = quote.replace(" ", "@")
+print(quote)
+print(modified_quote)
 
 
-# 2. Use a while loop to simulate the population until it reaches 10'000
-#    individuals or more. How many generation does it take?
-
-# Initialization.
-pop = 1000
-growth_factor = 1.5
-generation = 0
-
-# While the population is under 10'000, we continue to grow it.
-while pop < 10_000:
-    pop *= growth_factor
-    generation += 1
-    print("generation", generation, "- population:", pop)
-
-print(
-    "It takes",
-    generation,
-    "generations to reach 10'000 or more individuals. "
-    "The actual population at that point is:",
-    pop,
-)
-
-
-#  3. How does the above change if the population starts at 100 individuals?
-
-# All we have to do is change the initial population size to 100 in the code
-# that we wrote for point 2 above.
-pop = 100
+# Alternative using the "split()" and "join()" method: we split the quote
+# on whitespaces (removing all spaces), and then concatenate the words
+# back using "@", essentially replacing white spaces with "@".
+# Note that this will also e.g. replace "\t" and "\n", since they are
+# white spaces, unless we explicitly pass " " to split().
+print("@".join(quote.split()))
+print("@".join(quote.split(" ")))  # Avoids replacing "\t" or "\n"

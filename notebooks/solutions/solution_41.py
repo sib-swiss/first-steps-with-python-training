@@ -1,37 +1,109 @@
-# Exercise 4.1
+# In this solution, we provide 2 different ways to write a function
+# that creates the reverse complement of a sequence.
 
-import os  # Import the os module into the global namespace.
 
+def reverse_complement(seq):
+    """Returns the reverse complement of a sequence given as argument.
 
-def count_files(dir_name):
-    """Counts files present in the input directory.
-    Only files are counted, directories are ignored.
+    This is the implementation using a dictionary to lookup nucleotide
+    complements.
     """
+    nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
 
-    # Initialize file counter.
-    file_count = 0
+    # Create an empty string variable that will be used to store the
+    # function's output.
+    reversed_complement = ""
 
-    # Loop through all files and directories present in the input directory.
-    for file in os.listdir(path=dir_name):
-        # Get the absolute path of the file/directory.
-        full_path = os.path.join(dir_name, file)
+    # Loop through all nucleotides in the sequence in reverse sequence.
+    # In this way, we won't need to reverse the sequence later.
+    for nucleotide in seq[::-1]:
+        # Find the complement of the current nucleotide.
+        reversed_complement += nucleotide_complements[nucleotide]
 
-        # Verify the path corresponds to a file, not a directory.
-        if os.path.isfile(full_path):
-            file_count += 1
-
-    return file_count
-
-
-# Count the number of files in the parent directory of the current working
-# directory.
-parent_dir = os.path.dirname(os.getcwd())
-print("File count in [", parent_dir, "]: ", count_files(parent_dir), sep="")
+    # Return the reverse complement.
+    return reversed_complement
 
 
-# Alternative version of the function using a list generator comprehension.
-def count_files_2(input_dir):
-    """Counts files present in the input directory."""
-    return sum(
-        (1 for x in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, x)))
+def reverse_complement_2(seq):
+    """Returns the reverse complement of a sequence given as argument.
+
+    This is the implementation using if/else lookup nucleotide complements.
+    """
+    # Create an empty string variable that will be used to store the
+    # function's output.
+    complement = ""
+    # Loop through all nucleotides in the sequence...
+    for nucleotide in seq:
+        if nucleotide == "A":
+            complement += "T"
+        elif nucleotide == "T":
+            complement += "A"
+        elif nucleotide == "G":
+            complement += "C"
+        elif nucleotide == "C":
+            complement += "G"
+        else:
+            # In case the nucleotide is not A, T, G, or C -> error!
+            print("Unknown nucleotide :", nucleotide)
+            print("Abort!")
+            return None
+
+    # Reverse the complement.
+    return complement[::-1]
+
+
+def reverse_complement_3(seq):
+    """Returns the reverse complement of a sequence given as argument.
+
+    This is an implementation that replaces all nucleotides in the
+    sequence instead of looping over it. This requires the little trick
+    of replacing the nucleotides with lower case letters, before upper
+    casing them again.
+    """
+    return (
+        seq.upper()
+        .replace("A", "t")
+        .replace("T", "a")
+        .replace("G", "c")
+        .replace("C", "g")
+        .upper()[::-1]
     )
+
+
+# Let's test our functions:
+input_seq = "ATAGAGCGATCGATCCCTAGCTA"
+revcomp_seq = reverse_complement(input_seq)
+revcomp_seq_2 = reverse_complement_2(input_seq)
+revcomp_seq_3 = reverse_complement_3(input_seq)
+print("original              :", input_seq)
+print("reverse complemented  :", revcomp_seq)
+print("reverse complemented 2:", revcomp_seq_2)
+print("reverse complemented 3:", revcomp_seq_3)
+
+# Check against output of the online tool:
+online_result = "TAGCTAGGGATCGATCGCTCTAT"
+print("Is 'reverse_complement' result correct?", revcomp_seq == online_result)
+print("Is 'reverse_complement_2' result correct?", revcomp_seq_2 == online_result)
+print("Is 'reverse_complement_3' result correct?", revcomp_seq_3 == online_result)
+
+
+# Bonus: shorter way of writing the solution 2.
+def reverse_complement_2b(seq):
+    nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
+    return "".join(nucleotide_complements[n] for n in seq[::-1])
+
+
+# Bonus: benchmarking of the 3 functions.
+#        Uncomment the code below to run (it takes a little while to run).
+# Warning: %timeit is an iPython "magic" functions that benchmarks a function.
+#          This will only run a Jupyter notebook, not in a regular python shell.
+
+# test_sequence = "ATAGAGCGATCGATCCCTAG" * 10000
+# print("Benchmarking reverse_complement ...")
+# %timeit reverse_complement(test_sequence)
+# print("Benchmarking reverse_complement_2 ...")
+# %timeit reverse_complement_2(test_sequence)
+# print("Benchmarking reverse_complement_2b ...")
+# %timeit reverse_complement_2b(test_sequence)
+# print("Benchmarking reverse_complement_3 ...")
+# %timeit reverse_complement_3(test_sequence)

@@ -1,51 +1,56 @@
-strains = []
-regions = []
-countries = []
+# Note for the correction:
+# We here allow the population to be float numbers, but one could also
+# constrain it to be integers only.
 
-input_path = "data/genbank.sars-cov2.metadata.csv"
-with open(input_path, mode="r") as f:
-    # Read the header line without doing anything with it just to skip it.
-    f.readline()
+# 1. Simulate a few generation. How large is the population after 3 generations?
+pop = 1000
+growth_factor = 1.5
+print("generation 0 - population:", pop)
 
-    # Loop through all lines in the file:
-    for line in f:
-        # Remove the '\n' at the end of the line with "strip()", and
-        # split the line according to the ';' character
-        strain, region, country = line.strip().split(";")
+# At each generation, the population is multiplied by growth factor.
+pop *= growth_factor
+print("generation 1 - population:", pop)
+pop *= growth_factor
+print("generation 2 - population:", pop)
+pop *= growth_factor
+print("generation 3 - population:", pop)
 
-        # Add the strain, region and country values to their respective
-        # lists.
-        strains.append(strain)
-        regions.append(region)
-        countries.append(country)
+# As can be seen here, duplicating code is only practical when doing a few
+# generation, beyond that it quickly becomes tedious and error prone.
+# Using a loop is a much better solution.
+pop = 1000
+growth_factor = 1.5
 
-# Let's print our 3 lists:
-print(len(strains), "strains")
-print(len(regions), "regions")
-print(len(countries), "countries")
-
-# Print the first 3 entries of each lists:
-print("strains   :", strains[:3])
-print("regions   :", regions[:3])
-print("countries :", countries[:3])
+for generation in range(3):
+    pop *= growth_factor
+    print("generation", generation, "- population:", pop)
 
 
-# Alternative solution, using the pandas external module
-# ******************************************************
-# (a sneak peak of day 3 modules)
-import pandas as pd
+# 2. Use a while loop to simulate the population until it reaches 10'000
+#    individuals or more. How many generation does it take?
 
-df = pd.read_csv("data/genbank.sars-cov2.metadata.csv", sep=";")
-strains = list(df.strain)
-regions = list(df.region)
-countries = list(df.country)
+# Initialization.
+pop = 1000
+growth_factor = 1.5
+generation = 0
 
-# Let's print our 3 lists:
-print(len(strains), "strains")
-print(len(regions), "regions")
-print(len(countries), "countries")
+# While the population is under 10'000, we continue to grow it.
+while pop < 10_000:
+    pop *= growth_factor
+    generation += 1
+    print("generation", generation, "- population:", pop)
 
-# Print the first 3 entries of each lists:
-print("strains   :", strains[:3])
-print("regions   :", regions[:3])
-print("countries :", countries[:3])
+print(
+    "It takes",
+    generation,
+    "generations to reach 10'000 or more individuals. "
+    "The actual population at that point is:",
+    pop,
+)
+
+
+#  3. How does the above change if the population starts at 100 individuals?
+
+# All we have to do is change the initial population size to 100 in the code
+# that we wrote for point 2 above.
+pop = 100

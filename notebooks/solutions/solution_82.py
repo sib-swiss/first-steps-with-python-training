@@ -9,18 +9,21 @@ acceleration = [0, 2.92, 4.30, 1.31, 0.57, 0.32, 0.73, -0.36, 0.18, -0.18, -1.04
 # Solution using procedural mode
 # ******************************
 
+# Adjust plot size to make it bigger than the default.
+plt.figure(figsize=(10, 5))
+
 # Create a new plot with the distance, velocity and acceleration vs. time data.
-plt.plot(time, distance, label='distance [m]')
-plt.plot(time, velocity, label='velocity [m/s]')
-plt.plot(time, acceleration, label='acceleration [m/s^2]')
+plt.plot(time, distance, '--s', label='distance [m]', markersize=5)
+plt.plot(time, velocity, '-o', label='velocity [m/s]', color='teal', markersize=5)
+plt.plot(time, acceleration, '--', label='acceleration [m/s^2]', color='darkorange')
 
 # Add X and Y axis labels.
 plt.xlabel('Time [s]')
 plt.ylabel('Distance [m]')
 
 # Set a title and a legend for the figure.
-# Note the use of the "fontsize" and "markerscale" arguments to adjust the
-# size of the legend.
+# Note the use of the "fontsize" and "markerscale" arguments to adjust
+# the size of the legend.
 plt.title('Usain Bold 100m gold medal sprint - Beijing 2008')
 plt.legend(fontsize=12, markerscale=1.2)
 
@@ -38,17 +41,17 @@ fig = plt.figure(figsize=(10, 5))
 # Create an axis object (a subplot). Add the distance, velocity and 
 # acceleration vs. time data.
 ax = fig.add_subplot()
-ax.plot(time, distance, label='distance [m]', markersize=5)
-ax.plot(time, velocity, label='velocity [m/s]', color='teal', markersize=5)
-ax.plot(time, acceleration, label='acceleration [m/s^2]', color='darkorange')
+ax.plot(time, distance, '--s', label='distance [m]', markersize=5)
+ax.plot(time, velocity, '-o', label='velocity [m/s]', color='teal', markersize=5)
+ax.plot(time, acceleration, '--', label='acceleration [m/s^2]', color='darkorange')
 
 # Add X and Y axis labels.
 ax.set_xlabel('Time [s]')
 ax.set_ylabel('Distance [m]')
 
 # Set a title and a legend for the figure.
-# Note the use of the "fontsize" and "markerscale" arguments to adjust the
-# size of the legend.
+# Note the use of the "fontsize" and "markerscale" arguments to adjust
+# the size of the legend.
 ax.set_title('Usain Bold 100m gold medal sprint - Beijing 2008')
 ax.legend(fontsize=12, markerscale=1.2)
 

@@ -1,109 +1,77 @@
-# In this solution, we provide 2 different ways to write a function
-# that creates the reverse complement of a sequence.
+# Exercise 1.6
+
+science_doc = {
+    "Agricultural sciences": 1065,
+    "Biochemistry": 759,
+    "Molecular biology": 716,
+    "Neurosciences": 431,
+    "Other biological sciences": 3675,
+    "Computer sciences": 856,
+    "Earth, atmospheric, and ocean sciences": 706,
+    "Mathematics": 1083,
+    "Chemistry": 2132,
+    "Physics and astronomy": 715,
+    "Astrology": 2012,
+    "Psychology": 3668,
+    "Social sciences": 4063,
+}
+
+engineering_doc = {
+    "Aerospace/aeronautical engineering": 206,
+    "Chemical engineering": 576,
+    "Civil engineering": 506,
+    "Electrical engineering": 1236,
+    "Industrial/manufacturing engineering": 211,
+    "Materials science engineering": 393,
+    "Mechanical engineering": 786,
+    "Other engineering": 1416,
+}
+
+humanities_doc = {
+    "Foreign languages and literature": 626,
+    "History": 960,
+    "Letters": 1516,
+    "Other humanities": 1934,
+}
+
+# 1. Merge the 3 dictionaries
+# ***************************
+all_doc = {}
+all_doc.update(science_doc)
+all_doc.update(engineering_doc)
+all_doc.update(humanities_doc)
+print(all_doc)
+
+# Alternatively, we could also copy one of the dict as a starting point
+# with the "copy()" method of dict:
+all_doc_2 = science_doc.copy()
+all_doc_2.update(engineering_doc)
+all_doc_2.update(humanities_doc)
+print("Are the two dict identical?", all_doc == all_doc_2)
+
+# python > 3.5 ** dictionary unpacking.
+all_doc_3 = {**science_doc, **engineering_doc, **humanities_doc}
 
 
-def reverse_complement(seq):
-    """Returns the reverse complement of a sequence given as argument.
-
-    This is the implementation using a dictionary to lookup nucleotide
-    complements.
-    """
-    nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
-
-    # Create an empty string variable that will be used to store the
-    # function's output.
-    reversed_complement = ""
-
-    # Loop through all nucleotides in the sequence in reverse sequence.
-    # In this way, we won't need to reverse the sequence later.
-    for nucleotide in seq[::-1]:
-        # Find the complement of the current nucleotide.
-        reversed_complement += nucleotide_complements[nucleotide]
-
-    # Return the reverse complement.
-    return reversed_complement
+# 2. What is the length of the all_doc dictionary
+# ***********************************************
+print("Length of the dictionary:", len(all_doc))
 
 
-def reverse_complement_2(seq):
-    """Returns the reverse complement of a sequence given as argument.
-
-    This is the implementation using if/else lookup nucleotide complements.
-    """
-    # Create an empty string variable that will be used to store the
-    # function's output.
-    complement = ""
-    # Loop through all nucleotides in the sequence...
-    for nucleotide in seq:
-        if nucleotide == "A":
-            complement += "T"
-        elif nucleotide == "T":
-            complement += "A"
-        elif nucleotide == "G":
-            complement += "C"
-        elif nucleotide == "C":
-            complement += "G"
-        else:
-            # In case the nucleotide is not A, T, G, or C -> error!
-            print("Unknown nucleotide :", nucleotide)
-            print("Abort!")
-            return None
-
-    # Reverse the complement.
-    return complement[::-1]
+# 3. Add "Health" doctorates
+# **************************
+all_doc["Health"] = 1407
 
 
-def reverse_complement_3(seq):
-    """Returns the reverse complement of a sequence given as argument.
-
-    This is an implementation that replaces all nucleotides in the
-    sequence instead of looping over it. This requires the little trick
-    of replacing the nucleotides with lower case letters, before upper
-    casing them again.
-    """
-    return (
-        seq.upper()
-        .replace("A", "t")
-        .replace("T", "a")
-        .replace("G", "c")
-        .replace("C", "g")
-        .upper()[::-1]
-    )
+# 4. Multiply by 2 the number of "Physics and astronomy" doctorates
+# *****************************************************************
+key = "Physics and astronomy"
+print(key, ":", all_doc[key])
+all_doc[key] = all_doc[key] * 2  # Alternatively: all_doc[key] *= 2
+print(key, ":", all_doc[key])
 
 
-# Let's test our functions:
-input_seq = "ATAGAGCGATCGATCCCTAGCTA"
-revcomp_seq = reverse_complement(input_seq)
-revcomp_seq_2 = reverse_complement_2(input_seq)
-revcomp_seq_3 = reverse_complement_3(input_seq)
-print("original              :", input_seq)
-print("reverse complemented  :", revcomp_seq)
-print("reverse complemented 2:", revcomp_seq_2)
-print("reverse complemented 3:", revcomp_seq_3)
-
-# Check against output of the online tool:
-online_result = "TAGCTAGGGATCGATCGCTCTAT"
-print("Is 'reverse_complement' result correct?", revcomp_seq == online_result)
-print("Is 'reverse_complement_2' result correct?", revcomp_seq_2 == online_result)
-print("Is 'reverse_complement_3' result correct?", revcomp_seq_3 == online_result)
-
-
-# Bonus: shorter way of writing the solution 2.
-def reverse_complement_2b(seq):
-    nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
-    return "".join(nucleotide_complements[n] for n in seq[::-1])
-
-
-# Bonus: benchmarking of the 3 functions.
-#        Uncomment the code below to run (it takes a little while to run).
-# Warning: %timeit is an iPython "magic" functions that benchmarks a function.
-#          This will only run a Jupyter notebook, not in a regular python shell.
-
-# test_sequence = "ATAGAGCGATCGATCCCTAG" * 10000
-# print("Benchmarking reverse_complement ...")
-# %timeit reverse_complement(test_sequence)
-# print("Benchmarking reverse_complement_2 ...")
-# %timeit reverse_complement_2(test_sequence)
-# print("Benchmarking reverse_complement_2b ...")
-# %timeit reverse_complement_2b(test_sequence)
-# print("Benchmarking reverse_complement_3 ...")
-# %timeit reverse_complement_3(test_sequence)
+# 5. Remove the "Astrology" key
+# *****************************
+all_doc.pop("Astrology")
+print(all_doc)

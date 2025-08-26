@@ -1,14 +1,53 @@
-# Exercise 4.3
-
-import time
-
-# To see what the "sleep()" function does, we print its help:
-# Reading the help we learn that "time.sleep()" will pause
-# code execution for 3 seconds.
-help(time.sleep)
+# This solution relies on the method .isdigit() of str which returns "True"
+# if all characters in a string are digits.
 
 
-# Example usage:
-for x in range(5):
-    print("pausing code execution for 3 seconds...")
-    time.sleep(3)
+def split_numbers_and_words(line):
+    """Takes a string mixing letters and digits and transform it into a list
+    of the words (groups of letters) and numbers (group of digits) of the
+    string.
+    """
+    split_line = []  # This will store the return value: the split input line.
+
+    # Handle the special case of an empty input string.
+    # Note that "if not line" is simply a shortcut for "if len(line) == 0".
+    if not line:
+        return split_line
+
+    # Stores whether the previous character was a digit.
+    previous_is_digit = line[0].isdigit()
+    current_group = ""  # Store the word or number we are currently reading.
+
+    for c in line:
+        current_is_digit = c.isdigit()  # Is the current character a digit?
+
+        # If the current character has the same status than the previous
+        # character: -> the word or number grows.
+        if current_is_digit == previous_is_digit:
+            current_group += c
+
+        # If the current character does not have the same status than the
+        # previous character: -> indicates the end of a word or number.
+        else:
+            # If the group we just completed is a number, convert it to int.
+            if previous_is_digit:
+                current_group = int(current_group)
+
+            # Add the newly detected word or number to the list of results.
+            split_line.append(current_group)
+
+            # Now we start a new word with the current character.
+            current_group = c
+            previous_is_digit = current_is_digit
+
+    # The last thing we need to do is add the last group to our output list.
+    if previous_is_digit:
+        # If we are building a number, convert it to an integer
+        current_group = int(current_group)
+    split_line.append(current_group)
+
+    return split_line
+
+
+test_string = "Nobody0expects42the2048Spanish1492Inquisition!"
+print(test_string, "\n\t->", split_numbers_and_words(test_string))

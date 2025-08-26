@@ -1,51 +1,39 @@
+# Notes:
+# To read a file with python in a Jupyter Notebook, we must specify its
+# location relatively to our notebook. Since the file is located in a the
+# "data" subdirectory, must add "data/" to the input file name.
 
-# 1. Create a pandas DataFrame
-# ****************************
-import pandas as pd
+input_file = "data/Homo_sapiens.GRCh38.99.MT.gtf"
+output_file = "Homo_sapiens.GRCh38.99.MT.head.gtf"
 
-# Option 1: create data frame and assign index in a two steps.
-data = {
-    "row_position": range(100),
-    "index": range(1, 101),
-    "random_text": "hello from pandas",
-}
-df = pd.DataFrame(data)
-df.index = df["index"]
+with open(input_file, "r") as in_file, open(output_file, "w") as out_file:
+    for i in range(10):
+        print(in_file.readline(), file=out_file, end="")
+        # Note: we add the optional end="" argument to the "print()" function
+        # to avoid printing an additional "\n" character (newline) printed,
+        # since that would cause line skips (because each line already ends
+        # with a `\n` character read when read from the file).
+        # Alternatively we could have used `strip()` on the lines read from
+        # the input file: print(in_file.readline().strip(), file=out_file)
 
-# Note: alternatively, we can also use the "set_index()" method.
-#  -> use "drop = False" to keep the column used as index.
-#     By default drop = True.
-#  -> use "inplace = True" to modify the original DataFrame, otherwise
-#     a new DataFrame is returned.
-df.set_index("index", drop=False, inplace=True)
+# Verify that the file we created above is correct by reading it.
+# It should contain 10 lines.
+file_content = []
+with open(output_file, mode="r") as f:
+    for line in f:
+        file_content.append(line)
 
-
-# Option 2: create data frame and assign index in a single command.
-# Note that with this option, the index is does not get an associated label.
-df = pd.DataFrame(data, index=range(1, 101))
-
-# Print the first and last 5 rows.
-print(df.head())  # print first 5 rows.
-print(df.tail())  # print last 5 rows.
-df  # Displaying the DataFrame object will show the 5 first and last rows.
+print("The file has", len(file_content), "lines")
+for line in file_content:
+    print(line)
 
 
-# 2. Create a selection of the first 7 rows
-# *****************************************
-print("\nFirst 7 rows:\n", df.loc[1:7, ["row_position", "index"]])
-print("\nFirst 7 rows:\n", df.iloc[0:7, 0:2])
+# Note: in practice, reading a file line-by-line just to store its content
+# in a list does not make much sense. It's simpler to use readlines() in that
+# case, since we are anyway loading the whole file in memory.
+with open(output_file, mode="r") as f:
+    file_content = f.readlines()
 
-
-# 3. Add a new "reverse_index" column
-# ***********************************
-df["reverse_index"] = 100 - df["row_position"]
-df
-
-# 4. Delete the "index" column
-# ****************************
-df.drop("index", axis=1, inplace=True)
-# Alternative: del df["index"]
-
-# 5. Select row numbers multiple of 11
-# ************************************
-df.loc[df.index % 11 == 0, df.columns[0:2]]
+print("The file has", len(file_content), "lines")
+for line in file_content:
+    print(line)

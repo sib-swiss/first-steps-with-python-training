@@ -1,49 +1,49 @@
-### 7.2
+import pandas as pd
 
-# In this exercise, we will find the 'gene' and 'CDS' features for the spike
-# protein. The spike protein (S protein) is a large type I trans-membrane
-# protein, which is highly glycosylated. 
-# Spike proteins assemble into trimers on the virion surface to form the
-# distinctive "corona", or crown-like appearance. The gene is usually called
-# the **S** gene and the protein product is called **surface glycoprotein**.
-
-# **1.** First, write a function, which accepts a single argument, a record,
-# which has to be of `SeqRecord` type. 
-# This function should loop over all features of this record and return a
-# `list` of features whose `.type` is either **'gene' or 'CDS'**. You will
-# use this function in all other questions of **7.2**!
-
-def get_gene_cds_features(rec):
-    result = []
-    for feature in rec.features:
-        if feature.type in ['CDS', 'gene']:
-            result.append(feature)
-    return result
+# 1. Read input files as data frames.
+df_hosp = pd.read_csv("data/switzerland_covid19_hospitalized.csv")
+df_demo = pd.read_csv("data/switzerland_demographics.csv")
 
 
-# Using this function, print the **keys** of the qualifiers for all 'gene'
-# and 'CDS' features. 
-# What is the single **key** that can be found in all qualifiers?
-# *Hint:* Qualifiers are a special kind of dictionary called OrderedDict.
-# Their keys can be accessed by the `.keys()` method.
-
-for feature in get_gene_cds_features(rec):
-    print("{}: {}".format(feature.type, list(feature.qualifiers.keys())))
-
-# **2.**  Now, using the same function, print the `'gene'` qualifier for all.
-# Can you spot the 'S' gene?
-
-for feature in get_gene_cds_features(rec):
-    print("{}: {}".format(feature.type, feature.qualifiers['gene']))
+# 2. Update the index of both DataFrames.
+df_hosp.index = df_hosp["Date"]
+df_demo.index = df_demo["Canton"]
+df_demo.head()
+df_hosp.head()
 
 
-# **3.** Using the `'gene'` qualifier from the previous exercise, 
-# print the `location` of all 'gene' and 'CDS' features for the 'S' gene. 
+# 3. Subset the number of hospitalized person data frame.
+# Keep only columns "AG" -> "CH" (i.e. the first 27 columns).
+df_hosp = df_hosp.loc[:, "AG":"CH"]
+df_hosp.head()
 
-# *Attention, the value of the `'gene'` qualifier is a `list`*
+
+# 4. Extract population count per Canton
+pop_by_canton = df_demo.loc[df_hosp.columns, "Population"]
+
+# Note: as long as the index of the Series by which we divide (step 5 below)
+# is matching the columns of the DataFrame, the order of the elements in
+# Series does not matter. Therefore we can also simply do:
+#
+# pop_by_canton = df_demo["Population"]
 
 
-for feature in get_gene_cds_features(rec):
-    if feature.qualifiers['gene'][0] == "S":
-        print("{}: {}".format(feature.type, feature.location))
+# 5. Compute hospitalized people relative to population size
+# Convert the number of hospitalized people from raw count to
+# number per 10'000 inhabitants.
+df_hosp /= pop_by_canton / 10000
+df_hosp.head()
 
+
+# 6. For each canton, date at which the hospitalization rate was maximal.
+# one liner answer:
+df_hosp.idxmax(axis=0)
+
+
+# Additional tasks
+# ****************
+# Create new data frame with max hospitalized people and date.
+df_max_hosp = pd.DataFrame({"MaxHosp": df_hosp.max(), "Date": df_hosp.idxmax(axis=0)})
+
+df_max_hosp.sort_values("Date", ascending=True)
+df_max_hosp.sort_values("MaxHosp", ascending=False)
