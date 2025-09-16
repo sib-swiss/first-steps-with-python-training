@@ -1,3 +1,5 @@
+# Exercise 7.3
+
 import pandas as pd
 
 # 1. Center each column: subtract their mean from their values.

@@ -1,3 +1,5 @@
+# Exercise 4.1
+
 # In this solution, we provide 2 different ways to write a function
 # that creates the reverse complement of a sequence.
 
@@ -87,8 +89,8 @@ print("Is 'reverse_complement_2' result correct?", revcomp_seq_2 == online_resul
 print("Is 'reverse_complement_3' result correct?", revcomp_seq_3 == online_result)
 
 
-# Bonus: shorter way of writing the solution 2.
-def reverse_complement_2b(seq):
+# Bonus: shorter way of writing the solution 1.
+def reverse_complement_1b(seq):
     nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
     return "".join(nucleotide_complements[n] for n in seq[::-1])
 
@@ -101,9 +103,9 @@ def reverse_complement_2b(seq):
 # test_sequence = "ATAGAGCGATCGATCCCTAG" * 10000
 # print("Benchmarking reverse_complement ...")
 # %timeit reverse_complement(test_sequence)
+# print("Benchmarking reverse_complement_1b ...")
+# %timeit reverse_complement_1b(test_sequence)
 # print("Benchmarking reverse_complement_2 ...")
 # %timeit reverse_complement_2(test_sequence)
-# print("Benchmarking reverse_complement_2b ...")
-# %timeit reverse_complement_2b(test_sequence)
 # print("Benchmarking reverse_complement_3 ...")
 # %timeit reverse_complement_3(test_sequence)

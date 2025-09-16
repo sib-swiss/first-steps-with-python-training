@@ -1,4 +1,4 @@
-# Exercise 1.3
+# Exercise 2.2
 
 # 1. Store our favorite quote as a string variable
 # ************************************************

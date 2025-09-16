@@ -1,3 +1,5 @@
+# Exercise 4.3
+
 # This solution relies on the method .isdigit() of str which returns "True"
 # if all characters in a string are digits.
 

@@ -1,4 +1,4 @@
-# Exercise 4.4
+# Exercise 6.4
 
 # 1. What does is_part_of_set do?
 # *******************************

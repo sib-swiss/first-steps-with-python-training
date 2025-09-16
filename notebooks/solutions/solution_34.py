@@ -1,3 +1,5 @@
+# Exercise 3.4
+
 # 1. Write a function that returns the length of the Collatz sequence of n
 # ************************************************************************
 

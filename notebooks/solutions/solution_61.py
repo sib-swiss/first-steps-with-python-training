@@ -1,4 +1,4 @@
-# Exercise 4.1
+# Exercise 6.1
 
 import os  # Import the os module into the global namespace.
 

@@ -1,3 +1,5 @@
+# Exercise 5.3
+
 # In the code below, we will not presume that the features are ordered by
 # chromosome and position, and therefore we will read through the entire file.
 #
@@ -41,18 +43,17 @@ for line in to_report:
     print(line, end="")
 
 
-
 # Alternative solution that uses "iterable unpacking".
 input_path = "data/Homo_sapiens.GRCh38.99.MT.gtf"
 
 with open(input_path, mode="r") as f:
     for line in f:
         chromosome, _, feature, start, end, _, strand = line.strip().split("\t")[:7]
-        
+
         if (
             chromosome == "MT"
             and feature == "gene"
-            and strand == "+" 
+            and strand == "+"
             and int(start) > 7500
             and int(end) < 10000
         ):

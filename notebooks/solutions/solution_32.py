@@ -1,6 +1,7 @@
-# Note for the correction:
-# We here allow the population to be float numbers, but one could also
-# constrain it to be integers only.
+# Exercise 3.2
+
+# Note for the correction: we here allow the population to be float numbers,
+# but one could also constrain it to be integers only.
 
 # 1. Simulate a few generation. How large is the population after 3 generations?
 pop = 1000

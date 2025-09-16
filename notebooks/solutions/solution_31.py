@@ -1,3 +1,5 @@
+# Exercise 3.1
+
 threshold = 0.01
 pvalue_counter = 0
 

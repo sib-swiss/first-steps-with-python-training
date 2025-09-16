@@ -1,4 +1,4 @@
-# Exercise 4.3
+# Exercise 6.3
 
 import time
 

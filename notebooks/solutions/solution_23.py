@@ -1,4 +1,4 @@
-# Exercise 1.5
+# Exercise 2.3
 
 # 1. Create a dictionary with the classification of the Python genus
 # ******************************************************************
@@ -6,7 +6,7 @@ pythons = {
     "Class": "Reptilia",
     "Order": "Squamata",
     "Family": "Pythonidae",
-    "Genus": "Python"
+    "Genus": "Python",
 }
 
 

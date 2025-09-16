@@ -1,3 +1,5 @@
+# Exercise 7.2
+
 import pandas as pd
 
 # 1. Read input files as data frames.

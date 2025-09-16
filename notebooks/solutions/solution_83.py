@@ -1,3 +1,5 @@
+# Exercise 8.3
+
 import matplotlib.pyplot as plt
 import numpy as np   # This is only needed for the "Bonus" section at the end.
                      # Not needed for the actual exercise.

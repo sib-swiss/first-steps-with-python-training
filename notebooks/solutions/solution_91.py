@@ -1,6 +1,6 @@
-### 7.2
+# Exercise 9.1
 
-# **1.** For this and the following exercises we will work only with
+# 1. For this and the following exercises we will work only with
 # the **first accession**.
 # Retrieve the sequence record for the first accession from Genbank
 # using `Bio.Entrez`. Keep this record as a new variable.
@@ -25,7 +25,7 @@ print("Accession IDs do match:", rec.id == accession_id)
 print("Country of origin could be", rec.description.split("/")[2])
 
 
-# **2.** How many entries are there in the `annotations` of this record?
+# 2. How many entries are there in the `annotations` of this record?
 print("There are", len(rec.annotations), "annotations associated with this record")
 
 # Print the 'taxonomy' and the 'references' of this record. What is the title
@@ -36,7 +36,7 @@ print()
 print("Method of submission:", rec.annotations["references"][0].title)
 
 
-# **3.** How many entries are there in the `features` of this record?
+# 3. How many entries are there in the `features` of this record?
 # Print the first feature.
 print("There are", len(rec.features), "features")
 print(rec.features[0])
@@ -45,7 +45,8 @@ print(rec.features[0])
 # for a record. It holds like the 'annotations' very useful information about
 # the source of this record. Can you confirm the country of origin?
 print(
-    "The place of origin for this isolate is", rec.features[0].qualifiers["geo_loc_name"][0]
+    "The place of origin for this isolate is",
+    rec.features[0].qualifiers["geo_loc_name"][0],
 )
 
 # How many different possible values are there for the `type` of these

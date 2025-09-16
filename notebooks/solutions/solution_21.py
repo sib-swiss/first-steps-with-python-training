@@ -1,17 +1,17 @@
-# Exercise 1.4
+# Exercise 2.1
 
 seq = "GTGCCCCTCGAGAGGAGGGCGCGCGCCGCGCGCTCGACGCGATCGGCGCTCAGCGAGCGAGCTCCTCGAAGCGATCCGCGCGCGCT"
 pattern = "CTCGA"
-print(seq.find("CTCGA"))
+print(seq.find(pattern))
 
 # Limitation:
 # find() only returns the 1st occurrence of the motif...
 # To find other occurrences of "CTCGA", we can use the optional argument
 # "start" of the "find()" method and pass the index of the last found
 # motif + 1:
-print(seq.find("CTCGA", 7))
-print(seq.find("CTCGA", 33))
-print(seq.find("CTCGA", 65))  # "find()" returns -1 when no match is found.
+print(seq.find(pattern, 7))
+print(seq.find(pattern, 33))
+print(seq.find(pattern, 65))  # "find()" returns -1 when no match is found.
 
 
 # Alternatives using loops
@@ -23,12 +23,12 @@ print(seq.find("CTCGA", 65))  # "find()" returns -1 when no match is found.
 # Instantiate a list where we will store the motif positions, and get the
 # position of the first match.
 positions = []
-pos = seq.find("CTCGA")
+pos = seq.find(pattern)
 
 # This is a loop that will run as long as new matches are found...
 while pos != -1:
     positions.append(pos)  # Add motif position to result list.
-    pos = seq.find("CTCGA", pos + 1)  # Attempt to find another motif.
+    pos = seq.find(pattern, pos + 1)  # Attempt to find another motif.
 
 print(positions)
 
@@ -40,7 +40,7 @@ print(positions)
 # evaluate an expression at the same time.
 pos = -1
 positions = []
-while (pos := seq.find("CTCGA", pos + 1)) != -1:
+while (pos := seq.find(pattern, pos + 1)) != -1:
     positions.append(pos)
 print(positions)
 
