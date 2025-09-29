@@ -1,5 +1,7 @@
 {
   "title": "Course material First steps with Python in Life Sciences",
+  "upload_type": "lesson",
+  "license": "cc-by-4.0",
   "keywords": [
     "programming",
     "python",
@@ -8,16 +10,19 @@
   ],
   "creators": [
     {
-      "name": "Robin Engler",
-      "affiliation": "SIB Swiss Institute of Bioinformatics"
+      "name": "Robin, Engler",
+      "affiliation": "SIB Swiss Institute of Bioinformatics",
+      "orcid": "0009-0001-7090-6196"
     },
     {
-      "name": "Wandrille Duchemin",
-      "affiliation": "SIB Swiss Institute of Bioinformatics"
+      "name": "Duchemin, Wandrille",
+      "affiliation": "SIB Swiss Institute of Bioinformatics",
+      "orcid": "0000-0001-8854-7235"
     },
     {
-      "name": "Orlin Topalov",
-      "affiliation": "SIB Swiss Institute of Bioinformatics"
+      "name": "Topalov, Orlin",
+      "affiliation": "SIB Swiss Institute of Bioinformatics",
+      "orcid": "0009-0009-2548-7947"
     } 
   ]
 }
