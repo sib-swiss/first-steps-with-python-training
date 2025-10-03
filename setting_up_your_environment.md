@@ -6,7 +6,9 @@ Please install the following software on your personal laptop
 <br/>  
 <br/>  
 
-## Anaconda and Jupyter notebook
+## Setup using Anaconda
+
+### Anaconda and Jupyter notebook
 
 [**Anaconda**](https://www.anaconda.com) is an open-source python distribution
 that bundles **python3** along with a large number of useful python modules
@@ -25,12 +27,12 @@ contain both code and text annotations (in Markdown).
 <br/>  
 <br/>  
 
-## Installing anaconda
+### Installing Anaconda
 
-**To install anaconda:**
+**To install Anaconda:**
 
 * Go to <https://www.anaconda.com/products/individual>.
-* Download the version of anaconda matching your operating system.
+* Download the version of Anaconda matching your operating system.
 * Follow the installer's instructions.
 
 **To test whether your installation is working**, try to launch Jupyter
@@ -46,5 +48,32 @@ for existing notebooks (`.ipynb` files), or you can click on `new` > `Python3`
 to open a new empty notebook.
 
 An introduction to Jupyter Notebook will be given at the start of the lecture,
-so installing anaconda and checking that Jupyter Notebook is running is all you
+so installing Anaconda and checking that Jupyter Notebook is running is all you
 need to do for now.
+
+<br/>  
+<br/>  
+
+## Setup 
+
+### Installing Python packages using `pip`
+
+Installing Python packages globally c
+
+### Installing Python packages using `uv`
+
+If you already have Python installed on your system.
+[uv]()
+
+
+```sh
+# Create a virtual environment and populate it with all Python packages
+# needed for the course.
+uv sync
+
+# Start a Jupyter Notebook session in the virtual environment.
+uv run jupyter-notebook
+
+# Update virtual environment to the latest version of its Python packages. 
+uv sync --upgrade
+```
