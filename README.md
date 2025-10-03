@@ -2,7 +2,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17174469.svg)](https://doi.org/10.5281/zenodo.17174469)
 
 
-
 # First steps with Python in Life Sciences
 
 This is the course material of the "First Steps with Python in Life Science"
@@ -17,7 +16,7 @@ for creating and sharing computational documents in an interactive manner.
 
 <br>
 
-## Prerequisites installation
+## Prerequisites installation 🐣
 
 Please ensure you have installed all the required software as indicated in the
 **[environment setup](setting_up_your_environment.md)** section
@@ -25,7 +24,7 @@ Please ensure you have installed all the required software as indicated in the
 
 <br>
 
-## Useful links
+## Useful links 🔥
 
 * **Course material**: the easiest way to get the course material is to
   download the `.zip` file of the latest release that is available by
@@ -37,15 +36,14 @@ Please ensure you have installed all the required software as indicated in the
 
 <br>
 
-## Course material organization
+## Course material organization 📖
 
-The course revolves around a series of jupyter notebooks that take you on your
-first steps in you python journey.
+The course revolves around a series of jupyter notebooks that interleaves
+theory, code examples and exercises.
 
-Each jupyter notebook interleaves theory, code examples and exercises. We
-heartily recommend you execute and play around with these bits of code as you
-follow along: in programming, perhaps more than anywhere else, practice makes
-perfect.
+We heartily recommend you execute and play around with these bits of code as
+you follow along: in programming, perhaps more than anywhere else, practice
+makes perfect.
 
 Additionally, each notebook is associated with a number of **exercises**
 (generally in a separate notebook). **Corrections are provided** for all
@@ -58,7 +56,7 @@ In short, lessons 0 to 4 deal with general aspect of the python language,
 while notebooks 5 to 8 present some of the most common modules used in data
 analysis and/or life sciences.
 
-The [`notebooks/`](notebooks/) directory contains each lesson:
+**The [`notebooks/`](notebooks/) directory contains each lesson:**
 
 * [00_jupyter_setup](notebooks/00_jupyter_setup.ipynb)
 * [01_python_basics](notebooks/01_python_basics.ipynb)
@@ -75,7 +73,7 @@ The [`notebooks/`](notebooks/) directory contains each lesson:
   numerical computations with [numpy](https://numpy.org/) + a bit of statistics
   with [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html).
 
-Exercise notebooks:
+**Exercise notebooks:**
 
 * [01_python_basics_exercises](notebooks/01_python_basics_exercises.ipynb)
 * [02_python_structures_exercises](notebooks/02_python_structures_exercises.ipynb)
@@ -85,12 +83,24 @@ Exercise notebooks:
 * [06_module_matplotlib_exercises](notebooks/06_module_matplotlib_exercises.ipynb)
 * [07_module_biopython_exercises](notebooks/07_module_biopython_exercises.ipynb)
 
-Data and solutions:
+**Data and solutions:**
 
 * The data used in the practicals can be found in the
 [`notebooks/data`](notebooks/data/) directory.
 * Solutions can be found in the [`notebooks/solutions/`](notebooks/solutions/)
   directory, but can also be loaded directly from the exercise notebooks.
+
+<br>
+
+### Exam material 📝
+
+For people who would like to receive ECTS credits, an optional exam can be
+taken after the class (to be done in your own time). More details will be
+given about the exam during the class.
+
+* [exam instructions notebook](exam/exam.ipynb)
+* All data files necessary to complete the exam are in the `exam/` subdirectory
+  of this repo.
 
 <br>
 
@@ -194,4 +204,6 @@ section of the course webpage.
 
 If you use/reuse this material, please cite as:
 
-Robin Engler, & Wandrille Duchemin. (2025, September 19). Course material First steps with Python in Life Sciences. Zenodo. [https://doi.org/10.5281/zenodo.17174469](https://doi.org/10.5281/zenodo.17174469)
+Robin Engler, & Wandrille Duchemin. (2025, September 19). Course material First
+steps with Python in Life Sciences. Zenodo.
+[https://doi.org/10.5281/zenodo.17174469](https://doi.org/10.5281/zenodo.17174469)
