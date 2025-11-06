@@ -1,0 +1,13 @@
+[project]
+name = "first-steps-with-python"
+version = "1.0.0"
+description = "Introduction to Python SIB course"
+requires-python = ">=3.12"
+dependencies = [
+    "notebook",
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "biopython",
+]

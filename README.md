@@ -1,11 +1,11 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17174469.svg)](https://doi.org/10.5281/zenodo.17174469)
 
-
 # First steps with Python in Life Sciences
 
 This is the course material of the "First Steps with Python in Life Science"
-three-day course of [SIB-training](https://www.sib.swiss/training/who-can-benefit)
+three-day course of
+[SIB-training](https://www.sib.swiss/training/who-can-benefit).
 
 The course is addressed to **beginners** wanting to become familiar with the
 Python syntax, environment, and the most common commands.
@@ -27,9 +27,9 @@ Please ensure you have installed all the required software as indicated in the
 ## Useful links 🔥
 
 * **Course material**: the easiest way to get the course material is to
-  download the `.zip` file of the latest release that is available by
-  **[clicking on this link](https://github.com/sib-swiss/first-steps-with-python-training/releases/latest)**.
-* **[shared document](https://sibcloud-my.sharepoint.com/:w:/g/personal/wandrille_duchemin_sib_swiss/EVawgnUe2ORFoCYZ_oN7NwMBWuLTr6Vex4IRP727Io1hug?e=0m0EeZ)**:
+  download it as a `.zip` file from
+  [this link](https://github.com/sib-swiss/first-steps-with-python-training/releases/latest).
+* [**shared document**](https://sibcloud-my.sharepoint.com/:w:/g/personal/wandrille_duchemin_sib_swiss/EVawgnUe2ORFoCYZ_oN7NwMBWuLTr6Vex4IRP727Io1hug?e=0m0EeZ):
   can be used to ask questions (especially for courses taught online) or
   otherwise provide a mean of communication between participants and trainers
   (e.g. to share code snippets).
