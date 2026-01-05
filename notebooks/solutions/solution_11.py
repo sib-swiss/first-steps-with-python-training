@@ -1,12 +1,29 @@
-# Exercise 1.1
+# Exercise 1.2
 
-my_string = "0123456789abcdef"
+# 1. 
 
-# The third value passed to the slicing operator (in our example the number 2)
-# is the step/increment between each selected index in the sequence.
-# In this case, every 2nd letter is kept.
-print(my_string[0:10:2])
+# The problem is that "a" is an "int" and "b" is a "str".
+#  -> solution: we have to convert "b" to a number type (int or float)
+#     in order for the division to work.
+a = 12
+b = "36"
+division = int(b) / a
+print(division)
 
-# Setting a custom step value also allows the following neat trick to reverse
-# a string: have steps of -1.
-print(my_string[::-1])
+# 2. what if `b = "36.2"`
+
+# Note that if we use "int(b)", then the code will fail if "b" is set to
+# a fractional value. Using float(b) makes the code more resistant to
+# different user inputs as it will convert both inputs with and without
+# fractional values.
+a = 12
+b = "36.2"
+division = float(b) / a
+print(division)
+
+# 3. what if `a = "12"`
+
+a = "12"
+b = "36"
+division = int(b) / int(a)
+print(division)
