@@ -29,10 +29,7 @@ Please ensure you have installed all the required software as indicated in the
 * **Course material**: the easiest way to get the course material is to
   download it as a `.zip` file from
   [this link](https://github.com/sib-swiss/first-steps-with-python-training/releases/latest).
-* [**shared document**](https://sibcloud-my.sharepoint.com/:w:/g/personal/wandrille_duchemin_sib_swiss/EVawgnUe2ORFoCYZ_oN7NwMBWuLTr6Vex4IRP727Io1hug?e=0m0EeZ):
-  can be used to ask questions (especially for courses taught online) or
-  otherwise provide a mean of communication between participants and trainers
-  (e.g. to share code snippets).
+* **[python cheat-sheet](https://disco.ethz.ch/courses/hs24/coti/lecturenotes/pythoncheatsheet.pdf)** by Roger Wattenhofer from the [Distributed Computing Group](https://disco.ethz.ch/) of the ETHZ
 
 <br>
 
