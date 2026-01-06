@@ -5,17 +5,18 @@
 * **Day 1, 9h-12h, 13h-17h:**
   * Short intro to Python and programming.
   * Intro to Jupyter Notebooks [notebook 0].
-  * Python basics [notebook 1].
-  * Structuring code [notebook 2].
+  * Python simple types [notebook 1].
+  * Python container types [notebook 2].
+  * Structuring code [notebook 3].
 
 * **Day 2, 9h-12h, 13h-17h:**
-  * Structuring code [notebook 2] - continued.
-  * Reading and writing files [notebook 3].
+  * Structuring code [notebook 4] - continued.
+  * Reading and writing files [notebook 5].
 
 * **Day 3, 9h-12h, 13h-17h:**
-  * Python modules [notebook 4].
+  * Python modules [notebook 6].
   * Optional modules: Biopython, Pandas, Matplotlib, Numpy/Scipy
-    [notebook 5-8].
+    [notebook 7-11].
 
 **Breaks:**
 
@@ -75,35 +76,35 @@ the progress of the class.
 * 09h15: Intro to python
 * 09h45: Module 0 + fix people's problems with Jupyter
 * 10h15: Break
-* 10h30: Module 1 - part 1 (up to string slicing, included)
+* 10h30: Module 1
 * 12h00: Break
-* 13h00: Module 1 - part 2
-* 14h10: Exercises Module 1
-* 15h00: Corrections exercises Module 1
+* 13h00: Module 2
+* 14h10: Exercises Module 2
+* 15h00: Corrections exercises Module 2
 * 15h20: Break
-* 15h35: Module 2 - part 1 (up to while loops, included)
+* 15h35: Module 3
 * 17h00: End of day 1
 
 ### Day 2
 
 * 09h00: Recap
-* 09h20: Module 2 - part 2 (for loop tricks, continue and break)
+* 09h20: Module 4
 * 10h15: Break
-* 10h30: Exercises Module 2
+* 10h30: Exercises Module 4
 * 12h00: Break
-* 13h00: Corrections exercises Module 2
-* 13h30: Module 3
-* 14h30: Exercises Module 3
+* 13h00: Corrections exercises Module 4
+* 13h30: Module 5
+* 14h30: Exercises Module 5
 * 15h30: Break
-* 15h45: Corrections exercises Module 3
-* 16h05: Module 4 (Import modules and using your own module)
+* 15h45: Corrections exercises Module 5
+* 16h05: Module 6 (Import modules and using your own module)
 * 17h00: End of day 2
 
 ### Day 3
 
 * 09h00: Recap
-* 09h30: Exercises Module 4
-* 10h10: Corrections exercises Module 4
+* 09h30: Exercises Module 6
+* 10h10: Corrections exercises Module 6
 * 10h30: Break
 * 10h50: Optional modules session 1
 * 12h00: Break

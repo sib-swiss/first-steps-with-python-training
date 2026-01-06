@@ -55,30 +55,50 @@ analysis and/or life sciences.
 
 **The [`notebooks/`](notebooks/) directory contains each lesson:**
 
-* [00_jupyter_setup](notebooks/00_jupyter_setup.ipynb)
-* [01_python_basics](notebooks/01_python_basics.ipynb)
-* [02_python_structures](notebooks/02_python_structures.ipynb)
-* [03_reading_writing_files](notebooks/03_reading_writing_files.ipynb)
-* [04_modules](notebooks/04_modules.ipynb)
-* [05_module_pandas](notebooks/05_module_pandas.ipynb): handle tabular data
-  data-frames with [pandas](https://pandas.pydata.org/)
-* [06_module_matplotlib](notebooks/06_module_matplotlib.ipynb): create nice
-  graphics and plots with [matplotlib](https://matplotlib.org/)
-* [07_module_biopython](notebooks/07_module_biopython.ipynb) : do all kind of
-  bioinformatics with [biopython]](<https://biopython.org/>)
-* [08_module_numpy_and_scipy](notebooks/08_module_numpy_and_scipy.ipynb): fast
-  numerical computations with [numpy](https://numpy.org/) + a bit of statistics
-  with [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html).
 
+
+
+        08_module_matplotlib.ipynb
+
+
+            
+09_module_biopython.ipynb             
+
+
+06_modules_exercises.ipynb                
+10_module_numpy_and_scipy.ipynb
+
+06_modules.ipynb                          
+11_module_pandas_exercises.ipynb
+            
+               
+11_module_pandas.ipynb
+
+
+* [00_jupyter_setup](notebooks/00_jupyter_setup.ipynb)
+* [01_python_basics_simple_types](notebooks/01_python_basics_simple_types.ipynb)
+* [02_python_basics_container_types](notebooks/02_python_basics_container_types.ipynb)
+* [03_conditional_structures_and_loops](notebooks/03_conditional_structures_and_loops.ipynb)
+* [04_functions](notebooks/04_functions.ipynb)
+* [05_reading_writing_files](notebooks/05_reading_writing_files.ipynb)
+* [06_modules](notebooks/06_modules.ipynb)
+* [07_extra_modules_demo](notebooks/07_extra_modules_demo.ipynb): demonstration of the extra modules
+* [08_module_matplotlib](notebooks/06_module_matplotlib.ipynb): create nice graphics and plots with [matplotlib](https://matplotlib.org/)
+* [09_module_biopython](notebooks/07_module_biopython.ipynb) : do all kind of bioinformatics with [biopython]](<https://biopython.org/>)
+* [10_module_numpy_and_scipy](notebooks/08_module_numpy_and_scipy.ipynb): fast numerical computations with [numpy](https://numpy.org/) + a bit of statistics with [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html).
+* [11_module_pandas](notebooks/11_module_pandas.ipynb): handle tabular data data-frames with [pandas](https://pandas.pydata.org/)
+  
 **Exercise notebooks:**
 
-* [01_python_basics_exercises](notebooks/01_python_basics_exercises.ipynb)
-* [02_python_structures_exercises](notebooks/02_python_structures_exercises.ipynb)
-* [03_reading_writing_files_exercises](notebooks/03_reading_writing_files_exercises.ipynb)
-* [04_modules_exercises](notebooks/04_modules_exercises.ipynb)
-* [05_module_pandas_exercises](notebooks/05_module_pandas_exercises.ipynb)
-* [06_module_matplotlib_exercises](notebooks/06_module_matplotlib_exercises.ipynb)
-* [07_module_biopython_exercises](notebooks/07_module_biopython_exercises.ipynb)
+* [01_python_basics_simple_types_exercises.ipynb](notebooks/01_python_basics_simple_types_exercises.ipynb)
+* [02_python_basics_container_types_exercises.ipynb](notebooks/02_python_basics_container_types_exercises.ipynb)
+* [03_conditional_structures_and_loops_exercises.ipynb](notebooks/03_conditional_structures_and_loops_exercises.ipynb)
+* [04_functions_exercises.ipynb](notebooks/04_functions_exercises.ipynb)
+* [05_reading_writing_files_exercises.ipynb](notebooks/05_reading_writing_files_exercises.ipynb)
+* [06_modules_exercises.ipynb](notebooks/06_modules_exercises.ipynb)
+* [08_module_matplotlib_exercises.ipynb](notebooks/08_module_matplotlib_exercises.ipynb)
+* [09_module_biopython_exercises.ipynb](notebooks/09_module_biopython_exercises.ipynb)
+* [11_module_pandas_exercises.ipynb](notebooks/11_module_pandas_exercises.ipynb)
 
 **Data and solutions:**
 
