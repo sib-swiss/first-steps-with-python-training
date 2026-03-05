@@ -29,13 +29,15 @@ Please ensure you have installed all the required software as indicated in the
 * **Course material**: the easiest way to get the course material is to
   download it as a `.zip` file from
   [this link](https://github.com/sib-swiss/first-steps-with-python-training/releases/latest).
-* **[python cheat-sheet](https://disco.ethz.ch/courses/hs24/coti/lecturenotes/pythoncheatsheet.pdf)** by Roger Wattenhofer from the [Distributed Computing Group](https://disco.ethz.ch/) of the ETHZ
+* **[python cheat-sheet](https://disco.ethz.ch/courses/hs24/coti/lecturenotes/pythoncheatsheet.pdf)**
+  by Roger Wattenhofer from the ETHZ
+  [Distributed Computing Group](https://disco.ethz.ch).
 
 <br>
 
 ## Course material organization 📖
 
-The course revolves around a series of jupyter notebooks that interleaves
+The course revolves around a series of jupyter notebooks that interleave
 theory, code examples and exercises.
 
 We heartily recommend you execute and play around with these bits of code as
@@ -44,7 +46,7 @@ makes perfect.
 
 Additionally, each notebook is associated with a number of **exercises**
 (generally in a separate notebook). **Corrections are provided** for all
-exercises.
+exercises, and are embedded directly in the exercise jupyter notebooks.
 
 If you are attending this course with a teacher (or if you are just curious),
 you can take a look at our [schedule](schedule_and_structure.md).
@@ -55,26 +57,6 @@ analysis and/or life sciences.
 
 **The [`notebooks/`](notebooks/) directory contains each lesson:**
 
-
-
-
-        08_module_matplotlib.ipynb
-
-
-            
-09_module_biopython.ipynb             
-
-
-06_modules_exercises.ipynb                
-10_module_numpy_and_scipy.ipynb
-
-06_modules.ipynb                          
-11_module_pandas_exercises.ipynb
-            
-               
-11_module_pandas.ipynb
-
-
 * [00_jupyter_setup](notebooks/00_jupyter_setup.ipynb)
 * [01_python_basics_simple_types](notebooks/01_python_basics_simple_types.ipynb)
 * [02_python_basics_container_types](notebooks/02_python_basics_container_types.ipynb)
@@ -82,28 +64,34 @@ analysis and/or life sciences.
 * [04_functions](notebooks/04_functions.ipynb)
 * [05_reading_writing_files](notebooks/05_reading_writing_files.ipynb)
 * [06_modules](notebooks/06_modules.ipynb)
-* [07_extra_modules_demo](notebooks/07_extra_modules_demo.ipynb): demonstration of the extra modules
-* [08_module_matplotlib](notebooks/06_module_matplotlib.ipynb): create nice graphics and plots with [matplotlib](https://matplotlib.org/)
-* [09_module_biopython](notebooks/07_module_biopython.ipynb) : do all kind of bioinformatics with [biopython]](<https://biopython.org/>)
-* [10_module_numpy_and_scipy](notebooks/08_module_numpy_and_scipy.ipynb): fast numerical computations with [numpy](https://numpy.org/) + a bit of statistics with [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html).
-* [11_module_pandas](notebooks/11_module_pandas.ipynb): handle tabular data data-frames with [pandas](https://pandas.pydata.org/)
+* [07_extra_modules_demo](notebooks/07_extra_modules_demo.ipynb): demonstration
+  of the extra modules.
+* [08_module_matplotlib](notebooks/06_module_matplotlib.ipynb): create nice
+  graphics and plots with [matplotlib](https://matplotlib.org).
+* [09_module_biopython](notebooks/07_module_biopython.ipynb): do all kind of
+  bioinformatics with [biopython](https://biopython.org).
+* [10_module_numpy_and_scipy](notebooks/08_module_numpy_and_scipy.ipynb): fast
+  numerical computations with [numpy](https://numpy.org) + a bit of statistics
+  with [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html).
+* [11_module_pandas](notebooks/11_module_pandas.ipynb): handle tabular data
+  (data-frames) with [pandas](https://pandas.pydata.org).
   
 **Exercise notebooks:**
 
-* [01_python_basics_simple_types_exercises.ipynb](notebooks/01_python_basics_simple_types_exercises.ipynb)
-* [02_python_basics_container_types_exercises.ipynb](notebooks/02_python_basics_container_types_exercises.ipynb)
-* [03_conditional_structures_and_loops_exercises.ipynb](notebooks/03_conditional_structures_and_loops_exercises.ipynb)
-* [04_functions_exercises.ipynb](notebooks/04_functions_exercises.ipynb)
-* [05_reading_writing_files_exercises.ipynb](notebooks/05_reading_writing_files_exercises.ipynb)
-* [06_modules_exercises.ipynb](notebooks/06_modules_exercises.ipynb)
-* [08_module_matplotlib_exercises.ipynb](notebooks/08_module_matplotlib_exercises.ipynb)
-* [09_module_biopython_exercises.ipynb](notebooks/09_module_biopython_exercises.ipynb)
-* [11_module_pandas_exercises.ipynb](notebooks/11_module_pandas_exercises.ipynb)
+* [01_python_basics_simple_types_exercises](notebooks/01_python_basics_simple_types_exercises.ipynb)
+* [02_python_basics_container_types_exercises](notebooks/02_python_basics_container_types_exercises.ipynb)
+* [03_conditional_structures_and_loops_exercises](notebooks/03_conditional_structures_and_loops_exercises.ipynb)
+* [04_functions_exercises](notebooks/04_functions_exercises.ipynb)
+* [05_reading_writing_files_exercises](notebooks/05_reading_writing_files_exercises.ipynb)
+* [06_modules_exercises](notebooks/06_modules_exercises.ipynb)
+* [08_module_matplotlib_exercises](notebooks/08_module_matplotlib_exercises.ipynb)
+* [09_module_biopython_exercises](notebooks/09_module_biopython_exercises.ipynb)
+* [11_module_pandas_exercises](notebooks/11_module_pandas_exercises.ipynb)
 
 **Data and solutions:**
 
 * The data used in the practicals can be found in the
-[`notebooks/data`](notebooks/data/) directory.
+  [`notebooks/data`](notebooks/data/) directory.
 * Solutions can be found in the [`notebooks/solutions/`](notebooks/solutions/)
   directory, but can also be loaded directly from the exercise notebooks.
 
@@ -198,7 +186,8 @@ knowledge in Python or programming. However, we encourage people to be have
 some familiarity with basic shell/terminal commands (e.g. navigating the
 filesystem in command line). For people with no experience of shell commands,
 we recommend either taking the SIB's "First Steps with UNIX" course, or
-completing the SIB's ["First Steps with UNIX" e-learning module](https://edu.sib.swiss/pluginfile.php/2878/mod_resource/content/4/couselab-html/content.html).
+completing the SIB's
+["First Steps with UNIX" e-learning module](https://edu.sib.swiss/pluginfile.php/2878/mod_resource/content/4/couselab-html/content.html).
 Basic concepts of algorithmics is also a plus for this course.
 
 #### Technical
