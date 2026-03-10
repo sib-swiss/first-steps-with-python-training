@@ -1,6 +1,15 @@
 # ******************************************************************************
 # Micro Exercise 1
 # ****************
+n = 1444
+print(n)
+print("The value of 'n' is: ")
+# ******************************************************************************
+
+
+# ******************************************************************************
+# Micro Exercise 2
+# ****************
 a = 10
 42 + "a"
 # Trying to run: 42 + "a"
@@ -12,7 +21,7 @@ a = 10
 
 
 # ******************************************************************************
-# Micro Exercise 2
+# Micro Exercise 3
 # ****************
 # Convert "a" to an integer:
 
@@ -31,7 +40,7 @@ print("type of 'a' after conversion:", type(a), ", a = ", a)
 
 
 # *****************************************************************************
-# Micro Exercise 3
+# Micro Exercise 4
 # ****************
 # The exercise itself is basic, but it's a good opportunity to show why it is
 # important to use variables in code:

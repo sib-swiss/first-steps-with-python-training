@@ -39,9 +39,24 @@ else:
 
 # *****************************************************************************
 
-
 # *****************************************************************************
 # Micro Exercise 3
+# ****************
+l = [2,3,5,7,11]
+for element in l:
+    print(element)
+
+l2 = []
+for element in l:
+    multiplied_element = element * 3
+    l2.append(multiplied_element)
+
+print(l2)
+# *****************************************************************************
+
+
+# *****************************************************************************
+# Micro Exercise 4
 # ****************
 # 1. Use a while loop to create a list containing the multiples of 13 that
 #    are under 100.

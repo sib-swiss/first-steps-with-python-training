@@ -1,6 +1,6 @@
 # Exercise 1.2
 
-# 1. 
+# 1. Fix the initial version of the code.
 
 # The problem is that "a" is an "int" and "b" is a "str".
 #  -> solution: we have to convert "b" to a number type (int or float)
