@@ -121,3 +121,11 @@ the latest version of its Python packages:
 ```sh
 uv sync --upgrade
 ```
+
+To update `uv` itself, or clean its local cache. These commands can be
+executed from anywhere.
+
+```sh
+uv self update   # Upgrade uv to its latest version.
+uv cache clean   # Clear local cache where downloaded python packages are stored.
+```
