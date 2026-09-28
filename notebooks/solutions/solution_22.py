@@ -1,22 +1,18 @@
 # Exercise 2.2
 
-# 1. Store our favorite quote as a string variable
-# ************************************************
-quote = "ATGCCATTAGCGAGATCGATCGAT"
-
-# 2. Replace all spaces by '@' characters in the quote
-# ****************************************************
-# Since "quote" is a string, we look at "help(str)" to search for methods
-# of str objects. We can see that there is a "replace()" method that allows
-# replacing characters within a string.
-modified_quote = quote.replace("T", "U")
-print(quote)
-print(modified_quote)
+# Store the sequence as a string variable.
+dna_seq = "ATGCCATTAGCGAGATCGATCGAT"
 
 
-# Alternative using the "split()" and "join()" method: we split the quote
-# on whitespaces (removing all spaces), and then concatenate the words
-# back using "@", essentially replacing white spaces with "@".
-# Note that this will also e.g. replace "\t" and "\n", since they are
-# white spaces, unless we explicitly pass " " to split().
-print("U".join(quote.split('T')))
+# Since "seq" is a string, we look at "help(str)" to search for methods of str
+# objects. We can see that there is a "replace()" method that allows replacing
+# characters within a string.
+rna_seq = dna_seq.replace("T", "U")
+print("Original sequence   :", dna_seq)
+print("Transcribed sequence:", rna_seq)
+
+
+# Alternative using the "split()" and "join()" method: the sequence is first
+# split on the letter "T", and then joined on the letter "U". This effectively
+# replaces all "T" by "U", but is somewhat more cumbersome to read.
+print("U".join(dna_seq.split("T")))

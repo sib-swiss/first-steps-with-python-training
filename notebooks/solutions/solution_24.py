@@ -36,25 +36,21 @@ humanities_doc = {
 
 # 1. Merge the 3 dictionaries
 # ***************************
-all_doc = {}
-all_doc.update(science_doc)
+# The easiest way to complete this task is using the dict union operator: |
+all_doc = science_doc | engineering_doc | humanities_doc
+
+# Alternatively, we can also copy one of the dict as a starting point, and
+# then update it inplace with the content of the other two dicts.
+all_doc = science_doc.copy()
 all_doc.update(engineering_doc)
 all_doc.update(humanities_doc)
-print(all_doc)
 
-# Alternatively, we could also copy one of the dict as a starting point
-# with the "copy()" method of dict:
-all_doc_2 = science_doc.copy()
-all_doc_2.update(engineering_doc)
-all_doc_2.update(humanities_doc)
-print("Are the two dict identical?", all_doc == all_doc_2)
-
-# python > 3.5 ** dictionary unpacking.
-all_doc_3 = {**science_doc, **engineering_doc, **humanities_doc}
+# Or we can use dictionary unpacking.
+all_doc = {**science_doc, **engineering_doc, **humanities_doc}
 
 
-# 2. What is the length of the all_doc dictionary
-# ***********************************************
+# 2. Length of the all_doc dictionary
+# ***********************************
 print("Length of the dictionary:", len(all_doc))
 
 
@@ -65,10 +61,8 @@ all_doc["Health"] = 1407
 
 # 4. Multiply by 2 the number of "Physics and astronomy" doctorates
 # *****************************************************************
-key = "Physics and astronomy"
-print(key, ":", all_doc[key])
-all_doc[key] = all_doc[key] * 2  # Alternatively: all_doc[key] *= 2
-print(key, ":", all_doc[key])
+all_doc["Physics and astronomy"] *= 2
+print(all_doc["Physics and astronomy"])
 
 
 # 5. Remove the "Astrology" key
