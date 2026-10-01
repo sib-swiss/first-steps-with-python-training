@@ -15,24 +15,23 @@ else:
 
 # Same as above, but using the ternary operator.
 print("This is a", "long" if len(word) > 5 else "short", "word")
-print(f'This is a {"long" if len(word) > 5 else "short"} word')
+print(f"This is a {'long' if len(word) > 5 else 'short'} word")
 # *****************************************************************************
 
 
 # *****************************************************************************
 # Micro Exercise 2
 # ****************
-# Set the value of a and/or b so that the expression becomes `False`.
-#  -> change "a" or "l" so that "a" is no longer in "l".
-#  -> change "b" or "l" so that "b" is no longer in "l".
-# Note: the precedence of operations means that the the expression is
-#       evaluated as if it was: (not a in l) or (a > 0 and not b in l)
+# Set the value of "a" and/or "b" so that the expression becomes True.
+# We can achieve this by either:
+# -> Changing "a" or "l" so that "a" is no longer in "l".
+# -> Changing "b" or "l" so that "b" is no longer in "l".
 
-a = 7
+a = 8
 b = 22
 l = [7, 125, 48, 52, 2, 22, 1]
 
-if a not in l or (a > 0 and b not in l):
+if a in l or (a > 0 and b not in l):
     print("Success")
 else:
     print("This is all false...")
@@ -42,7 +41,7 @@ else:
 # *****************************************************************************
 # Micro Exercise 3
 # ****************
-l = [2,3,5,7,11]
+l = [2, 3, 5, 7, 11]
 for element in l:
     print(element)
 
@@ -60,7 +59,7 @@ print(l2)
 # ****************
 # 1. Use a while loop to create a list containing the multiples of 13 that
 #    are under 100.
-# 2. Then use a for loop to go though this list and print its elements.
+# 2. Then use a for loop to go through this list and print its elements.
 
 multiples = []
 x = 0
@@ -73,7 +72,7 @@ for x in multiples:
 
 
 # In real life, we would probably use "range()" for this task:
-multiples = list(range(0, 101, 13))
+multiples = list(range(0, 100, 13))
 
 # Less efficient alternative.
 multiples = []

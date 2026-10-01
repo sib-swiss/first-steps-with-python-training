@@ -2,7 +2,7 @@
 
 quote = (
     "Brave Sir Robin ran away. Bravely ran away away. "
-    "When danger reared it's ugly head, he bravely turned his tail and fled. "
+    "When danger reared its ugly head, he bravely turned his tail and fled. "
     "Brave Sir Robin turned about and gallantly he chickened out..."
 )
 
@@ -59,13 +59,13 @@ for letter in sorted(letter_counts):
 
 # Bonus: one liner, using set() and dictionary comprehension
 # **********************************************************
-# Note: set(quote) creates a "list" of unique characters in "quote".
+# Note: set(quote) creates a set of the unique characters in "quote".
 letter_counts = {x: quote.count(x) for x in set(quote)}
 
-# Same as above, but counting only letters, ignoring upper/lower case
-# differences, and in addition sorting the output alphabetically:
+# Same as above, but counting only letters and ignoring upper/lower case
+# differences:
 letter_counts = {
-    x: quote.lower().count(x) for x in sorted(set(quote.lower())) if x.isalpha()
+    x: quote.lower().count(x) for x in set(quote.lower()) if x.isalpha()
 }
 
 # Print the letter counts in alphabetical order.

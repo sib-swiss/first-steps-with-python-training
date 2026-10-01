@@ -1,7 +1,7 @@
 # Exercise 3.4
 
-# 1. Write loop that implements the Collatz conjecture
-# ****************************************************
+# 1. Write a loop that implements the Collatz conjecture
+# ******************************************************
 
 # Set the initial value of the sequence.
 x = 13
@@ -16,7 +16,7 @@ while x > 1:
     else:
         x = 3 * x + 1
 
-    # Add the new value to list.
+    # Add the new value to the list.
     collatz_values.append(x)
 
 
@@ -40,10 +40,10 @@ while x > 1:
     else:
         x = 3 * x + 1
 
-    # Add the new value to list.
+    # Add the new value to the list.
     collatz_values.append(x)
 
-    # Safety check: if the iterations does not converge after
+    # Safety check: if the sequence does not converge after
     # "max_iterations", the loop exits here.
     if len(collatz_values) > max_iterations:
         print(
