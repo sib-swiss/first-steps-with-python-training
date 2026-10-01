@@ -5,8 +5,8 @@
 
 
 def split_numbers_and_words(line):
-    """Takes a string mixing letters and digits and transform it into a list
-    of the words (groups of letters) and numbers (group of digits) of the
+    """Takes a string mixing letters and digits and transforms it into a list
+    of the words (groups of letters) and numbers (groups of digits) of the
     string.
     """
     split_line = []  # This will store the return value: the split input line.
@@ -23,12 +23,12 @@ def split_numbers_and_words(line):
     for c in line:
         current_is_digit = c.isdigit()  # Is the current character a digit?
 
-        # If the current character has the same status than the previous
+        # If the current character has the same status as the previous
         # character: -> the word or number grows.
         if current_is_digit == previous_is_digit:
             current_group += c
 
-        # If the current character does not have the same status than the
+        # If the current character does not have the same status as the
         # previous character: -> indicates the end of a word or number.
         else:
             # If the group we just completed is a number, convert it to int.
@@ -44,7 +44,7 @@ def split_numbers_and_words(line):
 
     # The last thing we need to do is add the last group to our output list.
     if previous_is_digit:
-        # If we are building a number, convert it to an integer
+        # If we are building a number, convert it to an integer.
         current_group = int(current_group)
     split_line.append(current_group)
 

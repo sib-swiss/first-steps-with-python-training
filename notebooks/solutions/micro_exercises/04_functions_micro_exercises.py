@@ -11,7 +11,7 @@ def print_to_screen(string_to_print, reverse=False):
     print(string_to_print)
 
 
-# Shorter version using ternary operator.
+# Shorter version using the ternary operator.
 def print_to_screen_2(string_to_print, reverse=False):
     print(string_to_print[::-1] if reverse else string_to_print)
 
@@ -23,7 +23,7 @@ print_to_screen("!nuf si nohtyp", reverse=True)
 
 
 # *****************************************************************************
-# Micro Exercise 5
+# Micro Exercise 2
 # ****************
 # Write a function that takes a number and returns its square.
 

@@ -7,7 +7,7 @@
 def reverse_complement(seq):
     """Returns the reverse complement of a sequence given as argument.
 
-    This is the implementation using a dictionary to lookup nucleotide
+    This is the implementation using a dictionary to look up nucleotide
     complements.
     """
     nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
@@ -16,7 +16,7 @@ def reverse_complement(seq):
     # function's output.
     reversed_complement = ""
 
-    # Loop through all nucleotides in the sequence in reverse sequence.
+    # Loop through all nucleotides in the sequence in reverse order.
     # In this way, we won't need to reverse the sequence later.
     for nucleotide in seq[::-1]:
         # Find the complement of the current nucleotide.
@@ -29,7 +29,7 @@ def reverse_complement(seq):
 def reverse_complement_2(seq):
     """Returns the reverse complement of a sequence given as argument.
 
-    This is the implementation using if/else lookup nucleotide complements.
+    This is the implementation using if/else to look up nucleotide complements.
     """
     # Create an empty string variable that will be used to store the
     # function's output.
@@ -46,7 +46,7 @@ def reverse_complement_2(seq):
             complement += "G"
         else:
             # In case the nucleotide is not A, T, G, or C -> error!
-            print("Unknown nucleotide :", nucleotide)
+            print("Unknown nucleotide:", nucleotide)
             print("Abort!")
             return None
 
@@ -89,16 +89,16 @@ print("Is 'reverse_complement_2' result correct?", revcomp_seq_2 == online_resul
 print("Is 'reverse_complement_3' result correct?", revcomp_seq_3 == online_result)
 
 
-# Bonus: shorter way of writing the solution 1.
+# Bonus: shorter way of writing solution 1.
 def reverse_complement_1b(seq):
     nucleotide_complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
     return "".join(nucleotide_complements[n] for n in seq[::-1])
 
 
-# Bonus: benchmarking of the 3 functions.
+# Bonus: benchmarking of the 4 functions.
 #        Uncomment the code below to run (it takes a little while to run).
-# Warning: %timeit is an iPython "magic" functions that benchmarks a function.
-#          This will only run a Jupyter notebook, not in a regular python shell.
+# Warning: %timeit is an IPython "magic" function that benchmarks a function.
+#          This will only run in a Jupyter notebook, not in a regular Python shell.
 
 # test_sequence = "ATAGAGCGATCGATCCCTAG" * 10000
 # print("Benchmarking reverse_complement ...")
