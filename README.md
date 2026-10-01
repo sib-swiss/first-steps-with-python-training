@@ -50,8 +50,8 @@ exercises, and are embedded directly in the exercise jupyter notebooks.
 If you are attending this course with a teacher (or if you are just curious),
 you can take a look at our [schedule](schedule_and_structure.md).
 
-In short, lessons 0 to 4 deal with general aspect of the python language,
-while notebooks 5 to 8 present some of the most common modules used in data
+In short, lessons 0 to 6 deal with general aspect of the python language,
+while notebooks 7 to 11 present some of the most common modules used in data
 analysis and/or life sciences.
 
 **The [`notebooks/`](notebooks/) directory contains each lesson:**
@@ -65,11 +65,11 @@ analysis and/or life sciences.
 * [06_modules](notebooks/06_modules.ipynb)
 * [07_extra_modules_demo](notebooks/07_extra_modules_demo.ipynb): demonstration
   of the extra modules.
-* [08_module_matplotlib](notebooks/06_module_matplotlib.ipynb): create nice
+* [08_module_matplotlib](notebooks/08_module_matplotlib.ipynb): create nice
   graphics and plots with [matplotlib](https://matplotlib.org).
-* [09_module_biopython](notebooks/07_module_biopython.ipynb): do all kind of
+* [09_module_biopython](notebooks/09_module_biopython.ipynb): do all kind of
   bioinformatics with [biopython](https://biopython.org).
-* [10_module_numpy_and_scipy](notebooks/08_module_numpy_and_scipy.ipynb): fast
+* [10_module_numpy_and_scipy](notebooks/10_module_numpy_and_scipy.ipynb): fast
   numerical computations with [numpy](https://numpy.org) + a bit of statistics
   with [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html).
 * [11_module_pandas](notebooks/11_module_pandas.ipynb): handle tabular data
@@ -209,4 +209,5 @@ section of the course webpage.
 
 If you use/reuse this material, please cite as:
 
-Engler, R., & Duchemin, W. (2026, March 13). Course material First steps with Python in Life Sciences. Zenodo. https://doi.org/10.5281/zenodo.19448710
+Engler, R., & Duchemin, W. (2026, March 13). Course material First steps with
+Python in Life Sciences. Zenodo. <https://doi.org/10.5281/zenodo.19448710>
